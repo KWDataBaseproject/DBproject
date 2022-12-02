@@ -9,8 +9,8 @@ const ComponentLayOut = css`
 
 const Title = css`
     height: 38px;
-    font-size: 24px;
-    margin-left: 5px;
+    font-size: 18px;
+    line-height: 45px;
     color: #ff8906;
 `
 
@@ -52,20 +52,20 @@ const NameLine = css`
     margin-left: 5px;
     margin-top: 5px;
     height: 33%;
-    font-size: 20px;
+    font-size: 15px;
     width: 100%;
 `
 
 const PriceLine = css`
     height: 33%;
-    font-size: 20px;
+    font-size: 15px;
     width: 100%;
     text-align: right;
 `
 
 const ChangeLine = css`
     height: 33%;
-    font-size: 20px;
+    font-size: 15px;
     width: 100%;
     text-align: right;
     margin-bottom: 5px;

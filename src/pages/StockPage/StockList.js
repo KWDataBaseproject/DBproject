@@ -4,31 +4,31 @@ import { useState } from 'react';
 import TapButton from './TapButton';
 
 const ComponentLayOut = css`
-    width: 18.5%;
-    height: 720px;
-    margin-top: 330px;
+    width: 270px;
+    height: 715px;
+    margin-top: 260px;
     position: fixed;
 `
 
 const SearchBar = css`
     display: flex; 
     justify-content: space-between;
-    height: 30px;
+    height: 18px;
     margin-top: 5px;
     margin-bottom: 5px;
 `
 
 const SearchTitle = css`
-    font-size: 16px;
-    line-height: 30px;
+    font-size: 15px;
+    line-height: 18px;
     text-align: right;
-    width: 25%;
+    width: 30%;
     margin-right: 10px;
 `
 
 const SearchInput = css`
-    width: 58%;
-    font-size:16px;
+    width: 45%;
+    font-size:12px;
     text-align:right;
 `
 
@@ -36,8 +36,10 @@ const SearchButton = css`
     width: 10%;
     background: grey;
     margin-right: 10px;
-    line-height: 30px;
+    line-height: 18px;
+    font-size: 12px;
     text-align: center;
+    border-radius: 2px;
 `
 
 const Tap = css`
@@ -54,8 +56,17 @@ const TapButtons = css`
 
 const List = css`
     width: 100%;
+    height: 480px;
     display: flex;
     flex-direction: column;
+    overflow-Y: auto;
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 2px;
+      background: #ccc;
+    }
 `
 
 const HLineBold = css`
@@ -72,7 +83,7 @@ const HLine = css`
 const TextLine = css`
     margin-top: 5px;
     margin-bottom: 5px;
-    height: 26px;
+    height: 21px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -90,28 +101,28 @@ const StockNameBox = css`
 `
 
 const StockName = css`
-    font-size: 20px;
-    line-height: 26px;
+    font-size: 13px;
+    line-height: 21px;
 `
 
 const StockCode = css`
     margin-left: 3px;
-    font-size: 12px;
-    line-height: 32px;
+    font-size: 10px;
+    line-height: 25px;
     color:grey;
 `
 
 const StockPrice = css`
-    font-size: 15px;
+    font-size: 10px;
     width: 20%;
-    line-height: 26px;
+    line-height: 21px;
 `
 
 const StockChange = css`
     margin-right: 5px;
-    font-size: 15px;
+    font-size: 10px;
     width: 30%;
-    line-height: 26px;
+    line-height: 21px;
     text-align: right;
 `
 
@@ -139,6 +150,24 @@ function StockList(){
                 </a>
             </div>
             <div css={List}>
+                <div css={TextLine}>
+                    <div css={StockNameBox}>
+                        <div css={StockName}>카카오</div>
+                        <div css={StockCode}>KRX: 035720</div>
+                    </div>
+                    <div css={StockPrice}>47,750 ￦</div>
+                    <div css={StockChange}>-2,050 ￦(4.12%)</div>
+                </div>
+                <div css={HLine}></div>
+                <div css={TextLine}>
+                    <div css={StockNameBox}>
+                        <div css={StockName}>카카오</div>
+                        <div css={StockCode}>KRX: 035720</div>
+                    </div>
+                    <div css={StockPrice}>47,750 ￦</div>
+                    <div css={StockChange}>-2,050 ￦(4.12%)</div>
+                </div>
+                <div css={HLine}></div>
                 <div css={TextLine}>
                     <div css={StockNameBox}>
                         <div css={StockName}>카카오</div>

@@ -9,21 +9,21 @@ const ComponentLayOut = css`
 `
 
 const LeftContent = css`
-    width: 63%;
+    width: 65%;
     display: flex;
     flex-direction: column;
 `
 
 const RightContent = css`
-    width: 30%;
+    width: 32%;
     display: flex;
     flex-direction: column;
 `
 
 const Title = css`
     height: 38px;
-    font-size: 24px;
-    margin-left: 5px;
+    font-size: 18px;
+    line-height: 45px;
     color: #ff8906;
 `
 
@@ -41,7 +41,7 @@ const HLine = css`
 const TextLine = css`
     margin-top: 5px;
     margin-bottom: 5px;
-    height: 40px;
+    height: 30px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -59,35 +59,35 @@ const StockNameBox = css`
 `
 
 const StockName = css`
-    font-size: 20px;
-    line-height: 40px;
+    font-size: 15px;
+    line-height: 30px;
 `
 
 const StockCode = css`
     margin-left: 3px;
-    font-size: 12px;
-    line-height: 50px;
+    font-size: 10px;
+    line-height: 37px;
     color:grey;
 `
 
 const StockPrice = css`
-    font-size: 15px;
+    font-size: 13px;
     width: 15%;
-    line-height: 40px;
+    line-height: 30px;
 `
 
 const StockChange = css`
-    font-size: 15px;
+    font-size: 13px;
     width: 20%;
-    line-height: 40px;
+    line-height: 30px;
     text-align: right;
 `
 
 const StockTotal = css`
     margin-right: 5px;
-    font-size: 15px;
+    font-size: 13px;
     width: 30%;
-    line-height: 40px;
+    line-height: 30px;
     text-align: right;
 `
 

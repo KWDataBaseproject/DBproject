@@ -4,7 +4,7 @@ import { useState } from 'react';
 import TapButton from './TapButton';
 
 const ComponentLayOut = css`
-    width: 18.5%;
+    width: 270px;
     height: 240px;
     position: fixed;
 `
@@ -29,29 +29,30 @@ const InputBox = css`
 const InputBoxLine = css`
     display: flex; 
     justify-content: space-between;
-    height: 30px;
+    height: 18px;
     margin-top: 5px;
     margin-bottom: 5px;
 `
 
 const InputTitle = css`
-    font-size: 16px;
-    line-height: 30px;
+    font-size: 13px;
+    line-height: 18px;
     text-align: right;
-    width: 25%;
+    width: 40%;
     margin-right: 10px;
 `
 
 const InputText = css`
     margin-right: 10px;
-    width: 68%;
-    font-size:16px;
+    width: 55%;
+    font-size: 13px;
     text-align:right;
 `
 
 const RadioLine = css`
-    width: 68%;
-    text-align:left;
+    width: 55%;
+    text-align: left;
+    font-size: 13px;
 `
 
 const ButtonLine = css`
@@ -64,22 +65,24 @@ const ButtonLine = css`
 
 const SendButton = css`
     margin-left: 10px;
-    width: 60%;
-    height: 40px;
-    background: red;
+    width: 150px;
+    height: 30px;
+    background: #FFA1A1;
     text-align: center;
-    font-size: 24px;
-    line-height: 40px;
+    font-size: 15px;
+    line-height: 30px;
+    color: white;
 `
 
 const ResetButton = css`
     margin-right: 10px;
-    width: 33%;
-    height: 40px;
-    background: grey;
+    width: 80px;
+    height: 30px;
+    background: #7C7B7B;
     text-align: center;
-    font-size: 24px;
-    line-height: 40px;
+    font-size: 15px;
+    line-height: 30px;
+    color: white;
 `
 
 function TradingBox(){

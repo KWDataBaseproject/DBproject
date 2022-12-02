@@ -2,15 +2,15 @@
 import { css } from '@emotion/react';
 
 const ComponentLayOut = css`
-    width: 37%;
+    width: 39%;
     display: flex;
     flex-direction: column;
 `
 
 const Title = css`
     height: 38px;
-    font-size: 24px;
-    margin-left: 5px;
+    line-height: 45px;
+    font-size: 18px;
     color: #ff8906;
 `
 
@@ -28,7 +28,7 @@ const HLine = css`
 const TextLine = css`
     margin-top: 5px;
     margin-bottom: 5px;
-    height: 26px;
+    height: 20px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -46,28 +46,28 @@ const StockNameBox = css`
 `
 
 const StockName = css`
-    font-size: 20px;
-    line-height: 26px;
+    font-size: 15px;
+    line-height: 20px;
 `
 
 const StockCode = css`
     margin-left: 3px;
-    font-size: 12px;
-    line-height: 32px;
+    font-size: 10px;
+    line-height: 25px;
     color:grey;
 `
 
 const StockPrice = css`
-    font-size: 15px;
+    font-size: 13px;
     width: 20%;
-    line-height: 26px;
+    line-height: 20px;
 `
 
 const StockChange = css`
     margin-right: 5px;
-    font-size: 15px;
+    font-size: 13px;
     width: 30%;
-    line-height: 26px;
+    line-height: 20px;
     text-align: right;
 `
 

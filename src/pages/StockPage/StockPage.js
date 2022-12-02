@@ -14,33 +14,18 @@ const PageRender = keyframes`
 `
 
 const PageLayOut = css`
-    height: 100%;
     display: flex;
     animation: ${PageRender} 1s;
     justify-content:space-between;
     margin-top:30px;
 `
 
-const LeftContent = css`
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-`
-
-const RightContent = css`
-    width: 66%;
-`
-
 function StockPage(){
     return(
         <div css={PageLayOut}>
-            <div css={LeftContent}>
                 <TradingBox/>
                 <StockList/>
-            </div>
-            <div css={RightContent}>
                 <StockDetail/>
-            </div>
         </div>
     );
 }

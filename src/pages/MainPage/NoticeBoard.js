@@ -9,8 +9,8 @@ const ComponentLayOut = css`
 
 const Title = css`
     height: 38px;
-    font-size: 24px;
-    margin-left: 5px;
+    font-size: 18px;
+    line-height: 45px;
     color: #ff8906;
 `
 
@@ -28,7 +28,7 @@ const HLine = css`
 const TextLine = css`
     margin-top: 5px;
     margin-bottom: 5px;
-    height: 26px;
+    height: 20px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -40,30 +40,30 @@ const TextLine = css`
 `
 
 const PostTitle = css`
-    font-size: 15px;
+    font-size: 13px;
     width: 40%;
-    line-height: 26px;
+    line-height: 20px;
 `
 
 const PostWriter = css`
     font-size: 13px;
     width: 20%;
-    line-height: 26px;
+    line-height: 20px;
     text-align: center;
 `
 
 const PostStock = css`
     font-size: 13px;
     width: 20%;
-    line-height: 26px;
+    line-height: 20px;
     text-align: center;
 `
 
 const PostTime = css`
     margin-right: 5px;
-    font-size: 15px;
+    font-size: 13px;
     width: 20%;
-    line-height: 26px;
+    line-height: 20px;
     text-align: right;
 `
 
