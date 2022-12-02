@@ -24,12 +24,12 @@ const PageLayOut = css`
 `
 
 const PageRow = css`
-    margin-top: 30px;
+    margin-top: 15px;
     width = 100%;
     display: flex;
     justify-content: space-between;
-    padding-top: 20px;
-    padding-bottom: 40px;
+    padding-top: 13px;
+    padding-bottom: 35px;
 `
 
 const VLine = css`

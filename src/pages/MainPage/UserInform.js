@@ -2,7 +2,7 @@
 import { css } from '@emotion/react';
 
 const ComponentLayOut = css`
-    width: 55%;
+    width: 59%;
     display: flex;
 `
 
@@ -18,8 +18,8 @@ const RightContent = css`
 
 const TextLine = css`
     width: 100%;
-    height: 60px;
-    line-height: 60px;
+    height: 50px;
+    line-height: 50px;
     display: flex;
     justify-content: flex-start;
 `
@@ -27,29 +27,29 @@ const TextLine = css`
 const UserNickName = css`
     width: 100%;
     text-align: center;
-    font-size: 20px;
+    font-size: 15px;
 `
 
 const RowTitle = css`
     width: 30%;
-    font-size: 24px;
+    font-size: 15px;
 `
 
 const RowContent = css`
     width: 60%;
-    font-size: 40px;
+    font-size: 30px;
     text-align: right;
 `
 
 const RowUnit = css`
-    font-size: 20px;
-    line-height: 350%;
+    font-size: 15px;
+    line-height: 60px;
     padding-left: 5px;
 `
 
 const HLineBold = css`
-border-bottom: 1px solid black;
-height: 0px;
+    border-bottom: 1px solid black;
+    height: 0px;
 `
 
 function UserInform(){

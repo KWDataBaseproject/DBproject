@@ -9,8 +9,8 @@ const ComponentLayOut = css`
 
 const Title = css`
     height: 38px;
-    font-size: 24px;
-    margin-left: 5px;
+    font-size: 18px;
+    line-height: 45px;
     color: #ff8906;
 `
 
@@ -28,7 +28,7 @@ const HLine = css`
 const TextLine = css`
     margin-top: 5px;
     margin-bottom: 5px;
-    height: 26px;
+    height: 20px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -40,23 +40,23 @@ const TextLine = css`
 `
 
 const PostTitle = css`
-    font-size: 15px;
+    font-size: 13px;
     width: 60%;
-    line-height: 26px;
+    line-height: 20px;
 `
 
 const PostWriter = css`
     font-size: 13px;
     width: 20%;
-    line-height: 26px;
+    line-height: 20px;
     text-align: center;
 `
 
 const PostTime = css`
     margin-right: 5px;
-    font-size: 15px;
+    font-size: 13px;
     width: 20%;
-    line-height: 26px;
+    line-height: 20px;
     text-align: right;
 `
 
@@ -66,7 +66,7 @@ function NewsBoard(){
             <div css={Title}>주요뉴스</div>
             <div css={HLineBold}></div>
             <div css={TextLine}>
-                <div css={PostTitle}>美 10년 국채 4.18%에도 나스닥 1% 출발</div>
+                <div css={PostTitle}>美 10년 국채 4.18%...</div>
                 <div css={PostWriter}>서울경제</div>
                 <div css={PostTime}>2022.10.20</div>
             </div>

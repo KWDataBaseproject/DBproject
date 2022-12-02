@@ -22,18 +22,26 @@ const Header = css`
 
 const Body = css`
     padding-top: 60px;
-    height: 1200px;
+    height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
+    overflow-Y: auto;
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 2px;
+      background: #ccc;
+    }
 `
 
 const Page = css`
     height: 100%;
     width: 60%;
     background: white;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
 `
 
 function Router() {
