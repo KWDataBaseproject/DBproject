@@ -166,13 +166,13 @@ function MajorStock(){
                 </div>
                 <div css={HLineBold}></div>
             </div>
-            <div css={VLine}></div>
             <div css={RightContent}>
                 <div css={Title}>삼성전자</div>
                 <div css={HLineBold}></div>
                 <div css={ChartBox}>
                     <img css={Chart} src={test}/>
                 </div>
+                <div css={HLineBold}></div>
             </div>
         </div>
     )

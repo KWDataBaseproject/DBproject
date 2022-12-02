@@ -42,7 +42,6 @@ function MainPage(){
         <div css={PageLayOut}>
             <div css={PageRow}>
                 <UserInform/>
-                <div css={VLine}></div>
                 <UserFavStock/>
             </div>
             <div css={PageRow}>
