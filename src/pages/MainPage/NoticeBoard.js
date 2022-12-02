@@ -15,12 +15,12 @@ const Title = css`
 `
 
 const HLineBold = css`
-    border: 1px solid black;
+    border-bottom: 1px solid black;
     height: 0px;
 `
 
 const HLine = css`
-    border: 1px solid grey;
+    border-bottom: 1px solid #E0E0E0;
     height: 0px;
     width: 100%;
 `

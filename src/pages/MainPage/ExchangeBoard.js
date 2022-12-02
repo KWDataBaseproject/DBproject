@@ -15,8 +15,13 @@ const Title = css`
 `
 
 const HLineBold = css`
-    border: 1px solid black;
+    border-bottom: 1px solid black;
     height: 0px;
+`
+
+const VLineBold = css`
+    border-right: 1px solid black;
+    width: 0px;
 `
 
 const Board = css`
@@ -41,11 +46,6 @@ const TextBox = css`
     flex-direction: column;
     justify-content: space-between;
     margin-right: 5px;
-`
-
-const VLineBold = css`
-    border-right: 1px solid black;
-    width: 0px;
 `
 
 const NameLine = css`

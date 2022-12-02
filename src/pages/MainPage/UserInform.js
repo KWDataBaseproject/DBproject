@@ -47,9 +47,9 @@ const RowUnit = css`
     padding-left: 5px;
 `
 
-const HLine = css`
-    border: 1px solid black;
-    height: 0px;
+const HLineBold = css`
+border-bottom: 1px solid black;
+height: 0px;
 `
 
 function UserInform(){
@@ -66,7 +66,7 @@ function UserInform(){
                     <div css={RowContent}>1,000,000,000</div>
                     <div css={RowUnit}>￦</div>
                 </div>
-                <div css={HLine}></div>
+                <div css={HLineBold}></div>
                 <div css={TextLine}>
                     <div css={RowTitle}>총 매수금액</div>
                     <div css={RowContent}>500,000,000</div>
