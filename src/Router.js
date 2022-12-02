@@ -54,6 +54,7 @@ function Router() {
                     <div css={Page}>
                         <Routes>
                             <Route exact path ="/" element={<MainPage/>}/>
+                            <Route path ="/DBproject" element={<MainPage/>}/>
                             <Route path ="/profile" element={<MyPage/>}/>
                             <Route path ="/news" element={<NewsPage/>}/>
                             <Route path ="/board" element={<BoardPage/>}/>
