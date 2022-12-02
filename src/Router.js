@@ -2,7 +2,7 @@
 import { css } from '@emotion/react';
 import { useState } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navigation from './components/Navigation';
+import Navigation from './common/Navigation';
 import MainPage from './pages/MainPage/MainPage';
 import MyPage from './pages/MyPage/MyPage';
 import BoardPage from './pages/BoardPage/BoardPage';
@@ -30,7 +30,7 @@ const Body = css`
 
 const Page = css`
     height: 100%;
-    width: 68.75%;
+    width: 60%;
     background: white;
     padding-left: 20px;
     padding-right: 20px;
