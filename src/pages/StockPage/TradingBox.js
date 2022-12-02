@@ -22,17 +22,8 @@ const TapButtons = css`
 const InputBox = css`
     margin-top: 5px;
     width: 100%;
-    background:grey;
     display: flex;
     flex-direction: column;
-`
-
-const SendButton = css`
-
-`
-
-const ResetButton = css`
-
 `
 
 const InputBoxLine = css`
@@ -61,6 +52,34 @@ const InputText = css`
 const RadioLine = css`
     width: 68%;
     text-align:left;
+`
+
+const ButtonLine = css`
+    margin-top:10px;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+`
+
+const SendButton = css`
+    margin-left: 10px;
+    width: 60%;
+    height: 40px;
+    background: red;
+    text-align: center;
+    font-size: 24px;
+    line-height: 40px;
+`
+
+const ResetButton = css`
+    margin-right: 10px;
+    width: 33%;
+    height: 40px;
+    background: grey;
+    text-align: center;
+    font-size: 24px;
+    line-height: 40px;
 `
 
 function TradingBox(){
@@ -101,6 +120,14 @@ function TradingBox(){
                 <div css={InputBoxLine}>
                     <div css={InputTitle}>주문총액</div>
                     <input css={InputText} type="text"/>
+                </div>
+            </div>
+            <div css={ButtonLine}>
+                <div css={SendButton}>
+                    매수
+                </div>
+                <div css={ResetButton}>
+                    초기화
                 </div>
             </div>
         </div>
