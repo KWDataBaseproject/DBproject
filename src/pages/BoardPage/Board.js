@@ -18,6 +18,7 @@ const BoardHeader = css`
     font-size: 24px;
     height: 40px;
     line-height: 40px;
+    color: #ff8906;
 `
 const BoardStock = css`
     display: flex;
