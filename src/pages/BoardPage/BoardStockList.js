@@ -79,6 +79,73 @@ const HLine = css`
     width: 100%;
 `
 
+const HeaderLine = css`
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 24px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+`
+
+const HeaderName = css`
+    margin-left: 5px;
+    width: 35%;
+    font-size:15px;
+    display: flex;
+    justify-content: center;
+`
+
+const HeaderPrice = css`
+    margin-left: 5px;
+    width: 25%;
+    text-align:center;
+    font-size:15px;
+    display: flex;
+    justify-content: center;
+`
+
+const HeaderChange = css`
+    margin-left: 5px;
+    width: 30%;
+    text-align:center;
+    font-size:15px;
+    display: flex;
+    justify-content: center;
+`
+
+const AlignButtonDesc = css`
+    width:0;
+    height:0;
+    margin-left: 3px;
+    margin-top:3px;
+    border:6px solid grey;
+    border-top-color: white;
+    border-left-color: white;
+    border-right-color: white;
+    &:hover{
+        border-bottom-color: black;
+        transform: translateY(0px);
+        transition: 0.3s;
+    }
+`
+
+const AlignButtonAsc = css`
+    width:0;
+    height:0;
+    margin-left: 3px;
+    margin-top: 8px;
+    border:6px solid grey;
+    border-bottom-color: white;
+    border-left-color: white;
+    border-right-color: white;
+    &:hover{
+        border-top-color: black;
+        transform: translateY(0px);
+        transition: 0.3s;
+    }
+`
+
 const TextLine = css`
     margin-top: 5px;
     margin-bottom: 5px;
@@ -95,7 +162,7 @@ const TextLine = css`
 
 const StockNameBox = css`
     margin-left: 5px;
-    width: 50%;
+    width: 42%;
     display: flex;
 `
 
@@ -128,6 +195,9 @@ const StockChange = css`
 
 function BoardStockList(){
     const [tapIndex, setTapIndex] = useState(0);
+    const [nameAlignDesc, setNameAlignDesc] = useState(true);
+    const [priceAlignDesc, setPriceAlignDesc] = useState(false);
+    const [changeAlignDesc, setChangeAlignDesc] = useState(false);
     return(
         <div css={ComponentLayOut}>
             <div css={SearchBar}>
@@ -149,6 +219,18 @@ function BoardStockList(){
                 </a>
             </div>
             <div css={List}>
+                <div css={HeaderLine}>
+                    <div css={HeaderName}>
+                        종목명<div css={nameAlignDesc ? AlignButtonDesc : AlignButtonAsc} onClick={() => {setNameAlignDesc((prev) => {return !prev;})}}/>
+                    </div>
+                    <div css={HeaderPrice}>
+                        현재가<div css={priceAlignDesc ? AlignButtonDesc : AlignButtonAsc} onClick={() => {setPriceAlignDesc((prev) => {return !prev;})}}/>
+                    </div>
+                    <div css={HeaderChange}>
+                        전일대비<div css={changeAlignDesc ? AlignButtonDesc : AlignButtonAsc} onClick={() => {setChangeAlignDesc((prev) => {return !prev;})}}/>
+                    </div>
+                </div>
+                <div css={HLine}></div>
                 <div css={TextLine}>
                     <div css={StockNameBox}>
                         <div css={StockName}>카카오</div>

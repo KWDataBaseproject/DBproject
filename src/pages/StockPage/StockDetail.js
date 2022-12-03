@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
 import StockInform from './StockInform';
+import test from '../MainPage/test.png';
 
 const ComponentLayOut = css`
     position: fixed;
@@ -11,12 +12,15 @@ const ComponentLayOut = css`
     flex-direction: column;
     overflow-Y: auto;
     &::-webkit-scrollbar {
-      width: 5px;
+        width: 5px;
     }
     &::-webkit-scrollbar-thumb {
-      border-radius: 2px;
-      background: #ccc;
+        border-radius: 2px;
+        background: #ccc;
     }
+`
+
+const Chart = css`
 `
 
 const InformBox = css`
@@ -26,34 +30,7 @@ function StockDetail(){
     return(
         <div css={ComponentLayOut}>
             <div css={InformBox}><StockInform/></div>
-            <div>OVERFLOWTEST</div>
-            <div>OVERFLOWTEST</div>
-            <div>OVERFLOWTEST</div>
-            <div>OVERFLOWTEST</div>
-            <div>OVERFLOWTEST</div>
-            <div>OVERFLOWTEST</div>
-            <div>OVERFLOWTEST</div>
-            <div>OVERFLOWTEST</div>
-            <div>OVERFLOWTEST</div>
-            <div>OVERFLOWTEST</div>
-            <div>OVERFLOWTEST</div>
-            <div>OVERFLOWTEST</div>
-            <div>OVERFLOWTEST</div>
-            <div>OVERFLOWTEST</div>
-            <div>OVERFLOWTEST</div>
-            <div>OVERFLOWTEST</div>
-            <div>OVERFLOWTEST</div>
-            <div>OVERFLOWTEST</div>
-            <div>OVERFLOWTEST</div>
-            <div>OVERFLOWTEST</div>
-            <div>OVERFLOWTEST</div>
-            <div>OVERFLOWTEST</div>
-            <div>OVERFLOWTEST</div>
-            <div>OVERFLOWTEST</div>
-            <div>OVERFLOWTEST</div>
-            <div>OVERFLOWTEST</div>
-            <div>OVERFLOWTEST</div>
-            <div>OVERFLOWTEST</div>
+            <img css={Chart} src={test}/>
         </div>
     )
 }
