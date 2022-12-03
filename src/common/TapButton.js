@@ -2,7 +2,7 @@
 import { css } from '@emotion/react';
 
 const ComponentLayOut = css`
-    font-size: 18px;
+    font-size: 15px;
     text-align: center;
     width: 100%;
 `

@@ -72,7 +72,7 @@ const ActiveButton = css`
     line-height: 40px;
 `
 
-function Navigation({pageIndex, setPageIndex}){
+function Navigation({setLogInModal, auth, pageIndex, setPageIndex}){
     
     return(
         <div css={Nav}>
@@ -111,6 +111,7 @@ function Navigation({pageIndex, setPageIndex}){
                         </div>
                     </div>
                 </NavLink>
+                {auth?
                 <NavLink to ="/profile"
                 style={{ textDecoration: 'none' }}
                 onClick={()=>{setPageIndex(4);}}>
@@ -120,6 +121,17 @@ function Navigation({pageIndex, setPageIndex}){
                         </div>
                     </div>
                 </NavLink>
+                :
+                <NavLink
+                style={{ textDecoration: 'none' }}
+                onClick={()=>{setLogInModal(true);}}>
+                    <div css={NavigationButton}>
+                        <div css={ButtonInner}>
+                        로그인
+                        </div>
+                    </div>
+                </NavLink>
+                }
             </div>
         </div>
     )

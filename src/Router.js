@@ -8,6 +8,7 @@ import MyPage from './pages/MyPage/MyPage';
 import BoardPage from './pages/BoardPage/BoardPage';
 import NewsPage from './pages/NewsPage/NewsPage';
 import StockPage from './pages/StockPage/StockPage';
+import LogInModal from './common/LogInModal';
 
 const Font = css`
     font-family: 'Noto Sans KR', sans-serif;
@@ -45,11 +46,14 @@ const Page = css`
 `
 
 function Router() {
-    const [pageIndex, setPageIndex] = useState(0)
+    const [pageIndex, setPageIndex] = useState(0);
+    const [auth, setAuth] = useState(false);
+    const [logInModal, setLogInModal] = useState(false);
     return (
         <div css={Font}>
             <BrowserRouter>
-                <div css={Header}><Navigation pageIndex={pageIndex} setPageIndex={setPageIndex}/></div>
+                <LogInModal setAuth={setAuth} logInModal={logInModal} setLogInModal={setLogInModal}/>
+                <div css={Header}><Navigation setLogInModal = {setLogInModal} auth = {auth} pageIndex={pageIndex} setPageIndex={setPageIndex}/></div>
                 <div css={Body}>
                     <div css={Page}>
                         <Routes>

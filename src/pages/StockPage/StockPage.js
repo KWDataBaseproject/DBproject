@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css, keyframes } from '@emotion/react';
 import StockDetail from './StockDetail';
-import StockList from './StockList';
+import StockList from './TradeStockList';
 import TradingBox from './TradingBox';
 
 const PageRender = keyframes`
