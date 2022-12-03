@@ -3,9 +3,19 @@ import { css } from '@emotion/react';
 import image from './image.png';
 
 const ComponentLayOut = css`
-    width: 100%;
+    position: fixed;
+    width: 760px;
+    height: 800px;
     display: flex;
     flex-direction: column;
+    overflow-Y: auto;
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 2px;
+      background: #ccc;
+    }
 `
 
 const Title = css`
@@ -60,7 +70,7 @@ const PostTime = css`
     line-height: 26px;
     text-align: right;
 `
-const ChartBox = css`
+const ImageBox = css`
     width: 50%;
     margin: 10px;
     height: 78%;
@@ -69,7 +79,7 @@ const ChartBox = css`
     justify-content: center;
 `
 
-const Chart = css`
+const Image = css`
     margin-top: 30px;
     width: 50%;
     height: 80%;
@@ -105,8 +115,8 @@ function NewsBoard(){
             <div css={TextLine}>
                 <div css={BoxRow}>
                     <div css={newBox}>
-                        <div css={ChartBox}>
-                            <img css={Chart} src={image}></img>
+                        <div css={ImageBox}>
+                            <img css={Image} src={image}></img>
                             <div css={PostWriter}>서울경제</div>
                             <div css={PostTime}>2022.10.20</div>
                         </div>
@@ -114,8 +124,8 @@ function NewsBoard(){
                     </div>
                     <div css={VLineBold}></div>
                     <div css={newBox}>
-                        <div css={ChartBox}>
-                            <img css={Chart} src={image}></img>
+                        <div css={ImageBox}>
+                            <img css={Image} src={image}></img>
                             <div css={PostWriter}>서울경제</div>
                             <div css={PostTime}>2022.10.20</div>
                         </div>
@@ -127,8 +137,8 @@ function NewsBoard(){
             <div css={TextLine}>
                 <div css={BoxRow}>
                     <div css={newBox}>
-                        <div css={ChartBox}>
-                            <img css={Chart} src={image}></img>
+                        <div css={ImageBox}>
+                            <img css={Image} src={image}></img>
                             <div css={PostWriter}>서울경제</div>
                             <div css={PostTime}>2022.10.20</div>
                         </div>
@@ -136,8 +146,8 @@ function NewsBoard(){
                     </div>
                     <div css={VLineBold}></div>
                     <div css={newBox}>
-                        <div css={ChartBox}>
-                            <img css={Chart} src={image}></img>
+                        <div css={ImageBox}>
+                            <img css={Image} src={image}></img>
                             <div css={PostWriter}>서울경제</div>
                             <div css={PostTime}>2022.10.20</div>
                         </div>
@@ -149,8 +159,8 @@ function NewsBoard(){
             <div css={TextLine}>
                 <div css={BoxRow}>
                     <div css={newBox}>
-                        <div css={ChartBox}>
-                            <img css={Chart} src={image}></img>
+                        <div css={ImageBox}>
+                            <img css={Image} src={image}></img>
                             <div css={PostWriter}>서울경제</div>
                             <div css={PostTime}>2022.10.20</div>
                         </div>
@@ -158,8 +168,8 @@ function NewsBoard(){
                     </div>
                     <div css={VLineBold}></div>
                     <div css={newBox}>
-                        <div css={ChartBox}>
-                            <img css={Chart} src={image}></img>
+                        <div css={ImageBox}>
+                            <img css={Image} src={image}></img>
                             <div css={PostWriter}>서울경제</div>
                             <div css={PostTime}>2022.10.20</div>
                         </div>
@@ -171,8 +181,8 @@ function NewsBoard(){
             <div css={TextLine}>
                 <div css={BoxRow}>
                     <div css={newBox}>
-                        <div css={ChartBox}>
-                            <img css={Chart} src={image}></img>
+                        <div css={ImageBox}>
+                            <img css={Image} src={image}></img>
                             <div css={PostWriter}>서울경제</div>
                             <div css={PostTime}>2022.10.20</div>
                         </div>
@@ -180,8 +190,8 @@ function NewsBoard(){
                     </div>
                     <div css={VLineBold}></div>
                     <div css={newBox}>
-                        <div css={ChartBox}>
-                            <img css={Chart} src={image}></img>
+                        <div css={ImageBox}>
+                            <img css={Image} src={image}></img>
                             <div css={PostWriter}>서울경제</div>
                             <div css={PostTime}>2022.10.20</div>
                         </div>
@@ -193,8 +203,8 @@ function NewsBoard(){
             <div css={TextLine}>
                 <div css={BoxRow}>
                     <div css={newBox}>
-                        <div css={ChartBox}>
-                            <img css={Chart} src={image}></img>
+                        <div css={ImageBox}>
+                            <img css={Image} src={image}></img>
                             <div css={PostWriter}>서울경제</div>
                             <div css={PostTime}>2022.10.20</div>
                         </div>
@@ -202,8 +212,8 @@ function NewsBoard(){
                     </div>
                     <div css={VLineBold}></div>
                     <div css={newBox}>
-                        <div css={ChartBox}>
-                            <img css={Chart} src={image}></img>
+                        <div css={ImageBox}>
+                            <img css={Image} src={image}></img>
                             <div css={PostWriter}>서울경제</div>
                             <div css={PostTime}>2022.10.20</div>
                         </div>
