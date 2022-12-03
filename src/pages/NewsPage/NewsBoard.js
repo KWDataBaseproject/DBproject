@@ -4,10 +4,6 @@ import image from './image.png';
 
 const ComponentLayOut = css`
     position: fixed;
-    margin-top: 20px;
-    background: #e0e0e0;
-    width: 100%;
-    height: 800px;
     display: flex;
     width: 60%;
     height: 88vh;
@@ -23,7 +19,8 @@ const ComponentLayOut = css`
 `
 
 const Title = css`
-    height: 38px;
+    height: 5vh;
+    line-height: 5vh;
     font-size: 24px;
     width: 100%;
     color: #ff8906;
@@ -43,16 +40,14 @@ const HLine = css`
 const RowLine = css`
     height: 25%;
     width: 100%;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    height: 200px;
+    height: 20vh;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
 `
 
 const NewsBox = css`
-    width: 49%;
+    width: 49.9%;
     height: 100%;
     display: flex;
     flex-direction: row;
@@ -65,46 +60,63 @@ const NewsBox = css`
 `
 
 const ImageBox = css`
-    width: 40%;
-    margin: 10px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-`
-
-const TitleBox = css`
     width: 50%;
-    margin: 10px;
     height: 100%;
+    margin: 10px;
+    margin-top: 23px;
     display: flex;
-    justify-content: flex-start;
     flex-direction: column;
+    justify-content: flex-start;
 `
 
 const Image = css`
     width: 100%;
-    height: 50%;
+    height: 66%;
+    border-radius: 5px;
+`
+
+const PostInform = css`
+    display: flex;
+    justify-content: space-between;
+`
+
+const PostWriter = css`
+    font-size: 18px;
+    width: 60%;
+    height: 20px;
+    line-height: 26px;
+    //text-align: center;
+`
+
+const PostTime = css`
+    font-size: 18px;
+    width: 40%;
+    height: 20px;
+    line-height: 26px;
+    text-align: right;
+`
+
+const TitleBox = css`
+    width: 50%;
+    height: 100%;
+    margin: 10px;
+    margin-top: 23px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
 `
 
 const VLine = css`
-    border-right: 1px solid black;
+    border-right: 1px solid #E0E0E0;
     width: 0px;
     height: 100%;
 `
-
 
 const PostTitle = css`
     font-size: 18px;
     width: 100%;
     line-height: 26px;
-`
-
-const PostWriter = css`
-    font-size: 13px;
-    width: 100%;
-    line-height: 26px;
-    text-align: center;
 `
 
 const PostContent = css`
@@ -119,13 +131,6 @@ const PostContent = css`
     text-align: center;
 `
 
-const PostTime = css`
-    font-size: 15px;
-    width: 100%;
-    line-height: 26px;
-    text-align: center;
-`
-
 function NewsBoard(){
     return(
         <div css={ComponentLayOut}>
@@ -135,8 +140,10 @@ function NewsBoard(){
                 <div css={NewsBox}>
                     <div css={ImageBox}>
                         <img css={Image} src={image}></img>
-                        <div css={PostWriter}>서울경제</div>
-                        <div css={PostTime}>2022.10.20</div>
+                        <div css={PostInform}>
+                            <div css={PostWriter}>서울경제</div>
+                            <div css={PostTime}>2022.10.20</div>
+                        </div>
                     </div>
                     <div css={TitleBox}>
                         <div css={PostTitle}>달러 약세 vs 저가 매수…환율, 1300원선 출발 예상[외환브리핑]
@@ -148,8 +155,10 @@ function NewsBoard(){
                 <div css={NewsBox}>
                     <div css={ImageBox}>
                         <img css={Image} src={image}></img>
-                        <div css={PostWriter}>서울경제</div>
-                        <div css={PostTime}>2022.10.20</div>
+                        <div css={PostInform}>
+                            <div css={PostWriter}>서울경제</div>
+                            <div css={PostTime}>2022.10.20</div>
+                        </div>
                     </div>
                     <div css={TitleBox}>
                         <div css={PostTitle}>달러 약세 vs 저가 매수…환율, 1300원선 출발 예상[외환브리핑]
@@ -163,8 +172,10 @@ function NewsBoard(){
                 <div css={NewsBox}>
                     <div css={ImageBox}>
                         <img css={Image} src={image}></img>
-                        <div css={PostWriter}>서울경제</div>
-                        <div css={PostTime}>2022.10.20</div>
+                        <div css={PostInform}>
+                            <div css={PostWriter}>서울경제</div>
+                            <div css={PostTime}>2022.10.20</div>
+                        </div>
                     </div>
                     <div css={TitleBox}>
                         <div css={PostTitle}>달러 약세 vs 저가 매수…환율, 1300원선 출발 예상[외환브리핑]
@@ -176,8 +187,10 @@ function NewsBoard(){
                 <div css={NewsBox}>
                     <div css={ImageBox}>
                         <img css={Image} src={image}></img>
-                        <div css={PostWriter}>서울경제</div>
-                        <div css={PostTime}>2022.10.20</div>
+                        <div css={PostInform}>
+                            <div css={PostWriter}>서울경제</div>
+                            <div css={PostTime}>2022.10.20</div>
+                        </div>
                     </div>
                     <div css={TitleBox}>
                         <div css={PostTitle}>달러 약세 vs 저가 매수…환율, 1300원선 출발 예상[외환브리핑]
@@ -191,8 +204,10 @@ function NewsBoard(){
                 <div css={NewsBox}>
                     <div css={ImageBox}>
                         <img css={Image} src={image}></img>
-                        <div css={PostWriter}>서울경제</div>
-                        <div css={PostTime}>2022.10.20</div>
+                        <div css={PostInform}>
+                            <div css={PostWriter}>서울경제</div>
+                            <div css={PostTime}>2022.10.20</div>
+                        </div>
                     </div>
                     <div css={TitleBox}>
                         <div css={PostTitle}>달러 약세 vs 저가 매수…환율, 1300원선 출발 예상[외환브리핑]
@@ -204,8 +219,10 @@ function NewsBoard(){
                 <div css={NewsBox}>
                     <div css={ImageBox}>
                         <img css={Image} src={image}></img>
-                        <div css={PostWriter}>서울경제</div>
-                        <div css={PostTime}>2022.10.20</div>
+                        <div css={PostInform}>
+                            <div css={PostWriter}>서울경제</div>
+                            <div css={PostTime}>2022.10.20</div>
+                        </div>
                     </div>
                     <div css={TitleBox}>
                         <div css={PostTitle}>달러 약세 vs 저가 매수…환율, 1300원선 출발 예상[외환브리핑]
@@ -219,8 +236,10 @@ function NewsBoard(){
                 <div css={NewsBox}>
                     <div css={ImageBox}>
                         <img css={Image} src={image}></img>
-                        <div css={PostWriter}>서울경제</div>
-                        <div css={PostTime}>2022.10.20</div>
+                        <div css={PostInform}>
+                            <div css={PostWriter}>서울경제</div>
+                            <div css={PostTime}>2022.10.20</div>
+                        </div>
                     </div>
                     <div css={TitleBox}>
                         <div css={PostTitle}>달러 약세 vs 저가 매수…환율, 1300원선 출발 예상[외환브리핑]
@@ -232,8 +251,10 @@ function NewsBoard(){
                 <div css={NewsBox}>
                     <div css={ImageBox}>
                         <img css={Image} src={image}></img>
-                        <div css={PostWriter}>서울경제</div>
-                        <div css={PostTime}>2022.10.20</div>
+                        <div css={PostInform}>
+                            <div css={PostWriter}>서울경제</div>
+                            <div css={PostTime}>2022.10.20</div>
+                        </div>
                     </div>
                     <div css={TitleBox}>
                         <div css={PostTitle}>달러 약세 vs 저가 매수…환율, 1300원선 출발 예상[외환브리핑]
