@@ -4,6 +4,10 @@ import image from './image.png';
 
 const ComponentLayOut = css`
     position: fixed;
+    margin-top: 20px;
+    background: #e0e0e0;
+    width: 100%;
+    height: 800px;
     display: flex;
     width: 60%;
     height: 88vh;
@@ -39,6 +43,9 @@ const HLine = css`
 const RowLine = css`
     height: 25%;
     width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 200px;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -235,8 +242,6 @@ function NewsBoard(){
                     </div>
                 </div>           
             </div>
-            <div css={HLine}></div>
-            
             <div css={HLineBold}></div>
         </div>
     )
