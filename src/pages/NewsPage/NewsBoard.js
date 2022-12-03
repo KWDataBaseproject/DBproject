@@ -3,14 +3,8 @@ import { css } from '@emotion/react';
 import image from './image.png';
 
 const ComponentLayOut = css`
-<<<<<<< HEAD
     position: fixed;
     width: 800px;
-=======
-    margin-top: 20px;
-    background: #e0e0e0;
-    width: 100%;
->>>>>>> edb87397f265434777628c322da488d1e6d8ea32
     height: 800px;
     display: flex;
     flex-direction: column;
@@ -44,18 +38,10 @@ const HLine = css`
     width: 100%;
 `
 
-<<<<<<< HEAD
 const RowLine = css`
     height: 25%;
     width: 100%;
-=======
-const TextLine = css`
-    margin-top: 5px;
-    margin-bottom: 5px;
-    height: 200px;
->>>>>>> edb87397f265434777628c322da488d1e6d8ea32
     display: flex;
-    background:grey;
     justify-content: space-between;
     flex-direction: row;
     
@@ -94,12 +80,7 @@ const TitleBox = css`
 
 const Image = css`
     width: 100%;
-<<<<<<< HEAD
     height: 50%;
-=======
-    height: 100%;
-    background:lightgrey;
->>>>>>> edb87397f265434777628c322da488d1e6d8ea32
 `
 
 const VLine = css`
@@ -257,11 +238,8 @@ function NewsBoard(){
                     </div>
                 </div>           
             </div>
-<<<<<<< HEAD
             <div css={HLine}></div>
             
-=======
->>>>>>> edb87397f265434777628c322da488d1e6d8ea32
             <div css={HLineBold}></div>
         </div>
     )
