@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css, keyframes } from '@emotion/react';
 import NewsBoard from './NewsBoard';
+import NewsPagination from './NewsPagination';
 const PageRender = keyframes`
     from{
         opacity: 0;
@@ -15,6 +16,7 @@ const PageLayOut = css`
     width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     animation: ${PageRender} 1s;
 `
 
@@ -35,7 +37,12 @@ const VLine = css`
 function NewsPage(){
     return(
         <div css={PageLayOut}>
-            <NewsBoard/>
+            <div css={PageRow}>
+                <NewsBoard/>
+            </div>
+            <div css={PageRow}>
+                <NewsPagination/>
+            </div>
         </div>
     );
 }

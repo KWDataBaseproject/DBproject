@@ -10,7 +10,7 @@ const ComponentLayOut = css`
     flex-direction: column;
     overflow-Y: auto;
     &::-webkit-scrollbar {
-        width: 5px;
+        width: 2px;
       }
     &::-webkit-scrollbar-thumb {
     border-radius: 2px;
