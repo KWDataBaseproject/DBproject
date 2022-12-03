@@ -3,8 +3,9 @@ import { css } from '@emotion/react';
 import image from './image.png';
 
 const ComponentLayOut = css`
-    position: fixed;
-    width: 760px;
+    margin-top: 20px;
+    background: #e0e0e0;
+    width: 100%;
     height: 800px;
     display: flex;
     flex-direction: column;
@@ -40,8 +41,8 @@ const TextLine = css`
     margin-top: 5px;
     margin-bottom: 5px;
     height: 200px;
-    width: 100%;
     display: flex;
+    background:grey;
     justify-content: space-between;
     &:hover{
         background: #E0E0E0;
@@ -90,6 +91,7 @@ const BoxRow = css`
     justify-content: space-between;
     width: 100%;
     height: 100%;
+    background:lightgrey;
 `
 
 const VLineBold = css`
@@ -112,28 +114,6 @@ function NewsBoard(){
         <div css={ComponentLayOut}>
             <div css={Title}>뉴스</div>
             <div css={HLineBold}></div>
-            <div css={TextLine}>
-                <div css={BoxRow}>
-                    <div css={newBox}>
-                        <div css={ImageBox}>
-                            <img css={Image} src={image}></img>
-                            <div css={PostWriter}>서울경제</div>
-                            <div css={PostTime}>2022.10.20</div>
-                        </div>
-                        <div css={PostWriter}>미국 달러인덱스 고용 지표 대기, 104선 하락 중국 위안화 역외서 7.03위안대 등락, 보합권 뉴욕증시 혼조세 마감, 국내증시 외국인 주목</div>
-                    </div>
-                    <div css={VLineBold}></div>
-                    <div css={newBox}>
-                        <div css={ImageBox}>
-                            <img css={Image} src={image}></img>
-                            <div css={PostWriter}>서울경제</div>
-                            <div css={PostTime}>2022.10.20</div>
-                        </div>
-                        <div css={PostWriter}>미국 달러인덱스 고용 지표 대기, 104선 하락 중국 위안화 역외서 7.03위안대 등락, 보합권 뉴욕증시 혼조세 마감, 국내증시 외국인 주목</div>
-                    </div>
-                </div>                             
-            </div>
-            <div css={HLine}></div>
             <div css={TextLine}>
                 <div css={BoxRow}>
                     <div css={newBox}>
