@@ -19,8 +19,18 @@ const HLineBold = css`
     height: 0px;
 `
 
+const HLine = css`
+    border-bottom: 1px solid #e0e0e0;
+    height: 0px;
+`
+
 const VLineBold = css`
     border-right: 1px solid black;
+    width: 0px;
+`
+
+const VLine = css`
+    border-right: 1px solid #e0e0e0;
     width: 0px;
 `
 
@@ -36,7 +46,7 @@ const BoxRow = css`
     display: flex;
     justify-content: space-between;
     width: 100%;
-    height: 49%;
+    height: 50%;
 `
 
 const TextBox = css`
@@ -89,7 +99,7 @@ function ExchangeBoard(){
                         - 7.00(0.49%)
                     </div>
                 </div>
-                <div css={VLineBold}></div>
+                <div css={VLine}></div>
                 <div css={TextBox}>
                     <div css={NameLine}>
                         USD
@@ -102,7 +112,7 @@ function ExchangeBoard(){
                     </div>
                 </div>
             </div>
-            <div css={HLineBold}></div>
+            <div css={HLine}></div>
             <div css={BoxRow}>
                 <div css={TextBox}>
                     <div css={NameLine}>
@@ -115,7 +125,7 @@ function ExchangeBoard(){
                         - 7.00(0.49%)
                     </div>
                 </div>
-                <div css={VLineBold}></div>
+                <div css={VLine}></div>
                 <div css={TextBox}>
                     <div css={NameLine}>
                         USD
