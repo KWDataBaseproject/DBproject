@@ -4,9 +4,9 @@ import image from './image.png';
 
 const ComponentLayOut = css`
     position: fixed;
-    width: 800px;
-    height: 800px;
     display: flex;
+    width: 60%;
+    height: 88vh;
     flex-direction: column;
     overflow-Y: auto;
     &::-webkit-scrollbar {
@@ -21,19 +21,17 @@ const ComponentLayOut = css`
 const Title = css`
     height: 38px;
     font-size: 24px;
-    margin-left: 5px;
     width: 100%;
     color: #ff8906;
 `
 
 const HLineBold = css`
-    border: 1px solid black;
-    width: 100%;
+    border-bottom: 1px solid black;
     height: 0px;
 `
 
 const HLine = css`
-    border: 1px solid grey;
+    border-bottom: 1px solid #E0E0E0;
     height: 0px;
     width: 100%;
 `
@@ -44,11 +42,10 @@ const RowLine = css`
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    
 `
 
 const NewsBox = css`
-    width: 399px;
+    width: 49%;
     height: 100%;
     display: flex;
     flex-direction: row;
