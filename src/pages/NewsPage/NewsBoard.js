@@ -4,9 +4,13 @@ import image from './image.png';
 
 const ComponentLayOut = css`
     position: fixed;
-    width: 800px;
+    margin-top: 20px;
+    background: #e0e0e0;
+    width: 100%;
     height: 800px;
     display: flex;
+    width: 60%;
+    height: 88vh;
     flex-direction: column;
     overflow-Y: auto;
     &::-webkit-scrollbar {
@@ -21,19 +25,17 @@ const ComponentLayOut = css`
 const Title = css`
     height: 38px;
     font-size: 24px;
-    margin-left: 5px;
     width: 100%;
     color: #ff8906;
 `
 
 const HLineBold = css`
-    border: 1px solid black;
-    width: 100%;
+    border-bottom: 1px solid black;
     height: 0px;
 `
 
 const HLine = css`
-    border: 1px solid grey;
+    border-bottom: 1px solid #E0E0E0;
     height: 0px;
     width: 100%;
 `
@@ -41,14 +43,16 @@ const HLine = css`
 const RowLine = css`
     height: 25%;
     width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 200px;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    
 `
 
 const NewsBox = css`
-    width: 399px;
+    width: 49%;
     height: 100%;
     display: flex;
     flex-direction: row;
@@ -238,8 +242,6 @@ function NewsBoard(){
                     </div>
                 </div>           
             </div>
-            <div css={HLine}></div>
-            
             <div css={HLineBold}></div>
         </div>
     )
