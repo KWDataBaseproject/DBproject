@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
 import { useState } from 'react';
-import TapButton from './TapButton';
+import TapButton from '../../common/TapButton';
 
 const ComponentLayOut = css`
     width: 270px;
