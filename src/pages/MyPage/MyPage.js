@@ -5,6 +5,7 @@ import UserFavStock from '../../common/UserFavStock';
 import NoticeBoard from '../../common/NoticeBoard';
 import MyOwnedList from './MyOwnedList';
 import MyTradeList from './MyTradeList';
+import MyStockInform from './MyStockInform';
 import { NavLink } from 'react-router-dom';
 
 const PageRender = keyframes`
@@ -46,6 +47,9 @@ function MyPage(setAuth){
             <div css={PageRow}>
                 <UserInform/>
                 <UserFavStock/>
+            </div>
+            <div css={PageRow}>
+                <MyStockInform/>
             </div>
             <div css={PageRow}>
                 <MyOwnedList/>
