@@ -1,8 +1,8 @@
 /** @jsxImportSource @emotion/react */
 import { css, keyframes } from '@emotion/react';
-import UserInform from '../../common/UserInform';
-import UserFavStock from '../../common/UserFavStock';
-import NoticeBoard from '../../common/NoticeBoard';
+import UserInform from './UserInform';
+import UserFavStock from './UserFavStock';
+import NoticeBoard from './NoticeBoard';
 import MajorStock from './MajorStock';
 import ExchangeBoard from './ExchangeBoard';
 import NewsBoard from './NewsBoard';
