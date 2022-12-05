@@ -55,7 +55,7 @@ function Router() {
                 <LogInModal setAuth={setAuth} logInModal={logInModal} setLogInModal={setLogInModal}/>
                 <div css={Header}><Navigation setLogInModal = {setLogInModal} auth = {auth} pageIndex={pageIndex} setPageIndex={setPageIndex}/></div>
                 <div css={Body}>
-                    <div css={Page}>
+                    <div css={Page} id="Page" name="Page">
                         <Routes>
                             <Route exact path ="/" element={<MainPage/>}/>
                             <Route path ="/DBproject" element={<MainPage/>}/>

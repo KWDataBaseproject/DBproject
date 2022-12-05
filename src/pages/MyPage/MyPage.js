@@ -1,12 +1,10 @@
 /** @jsxImportSource @emotion/react */
 import { css, keyframes } from '@emotion/react';
-import UserInform from '../../common/UserInform';
-import UserFavStock from '../../common/UserFavStock';
-import NoticeBoard from '../../common/NoticeBoard';
-import MyOwnedList from './MyOwnedList';
-import MyTradeList from './MyTradeList';
-import MyStockInform from './MyStockInform';
 import { NavLink } from 'react-router-dom';
+import MyTapBar from './MyTapBar';
+import MyDetail from './MyDetail';
+import MyUserInform from './MyUserInform';
+import { useState } from 'react';
 
 const PageRender = keyframes`
     from{
@@ -26,13 +24,32 @@ const PageLayOut = css`
     flex-direction: column;
 `
 
-const PageRow = css`
+const HLineBold = css`
+    border-bottom: 1px solid black;
+    height: 0px;
+`
+
+const HLine = css`
+    border-bottom: 1px solid #e0e0e0;
+    height: 0px;
+`
+
+const MyPageUserInform = css`
     margin-top: 15px;
     width = 100%;
-    display: flex;
-    justify-content: space-between;
     padding-top: 13px;
     padding-bottom: 5px;
+`
+
+const MyPageTap = css`
+    width: 100%;
+    display: flex;
+
+`
+
+const MyPageDetail = css`
+    width: 100%;
+    display: flex;
 `
 
 const TestButton = css`
@@ -42,20 +59,19 @@ const TestButton = css`
 `
 
 function MyPage(setAuth){
+    const [tapIndex, setTapIndex] = useState(0);
     return(
         <div css={PageLayOut}>
-            <div css={PageRow}>
-                <UserInform/>
-                <UserFavStock/>
+            <div css={MyPageUserInform}>
+            <div css={HLineBold}/>
+                <MyUserInform/>
             </div>
-            <div css={PageRow}>
-                <MyStockInform/>
+            <div css={HLineBold}/>
+            <div css={MyPageTap}>
+                <MyTapBar tapIndex={tapIndex} setTapIndex={setTapIndex}/>
             </div>
-            <div css={PageRow}>
-                <MyOwnedList/>
-            </div>
-            <div css={PageRow}>
-                <MyTradeList/>
+            <div css={MyPageDetail}>
+                <MyDetail tapIndex={tapIndex}/>
             </div>
             <NavLink to ="/" onClick={()=>{setAuth(false);}}><button css={TestButton}>LOG OUT TEST</button></NavLink>
         </div>

@@ -6,6 +6,23 @@ const ComponentLayOut = css`
     display: flex;
     flex-direction: column;
 `
+
+const StockList = css`
+    width: 100%;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid black;
+    overflow-Y: auto;
+    &::-webkit-scrollbar {
+    width: 2px;
+    }
+    &::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background: #ccc;
+    }
+`
+
 const HLineBold = css`
     border-bottom: 1px solid black;
     height: 0px;
@@ -63,6 +80,7 @@ const StockLine = css`
 const StockLineNameCard = css`
 width: 16%;
 display: flex;
+height: 50px;
 flex-direction: column;
 justify-content: center;
 `
@@ -138,58 +156,79 @@ function MyTradeList(){
                 <div css={HeaderLineStatus}>거래현황</div>
             </div>
             <div css={HLineBold}/>
-            <div css={StockLine}>
-                <div css={StockLineNameCard}>
-                    <div css={StockLineName}>광운대학교</div>
-                    <div css={StockLineCode}>000000</div>
+            <div css={StockList}>
+                <div css={StockLine}>
+                    <div css={StockLineNameCard}>
+                        <div css={StockLineName}>광운대학교</div>
+                        <div css={StockLineCode}>000000</div>
+                    </div>
+                    <div css={StockLineQuantity}>
+                        <div css={StockLineValue}>100</div>
+                        <div css={StockLineUnit}>주</div>
+                    </div>
+                    <div css={StockLinePrice}>
+                        <div css={StockLineValue}>30</div>
+                        <div css={StockLineUnit}>￦</div>
+                    </div>
+                    <div css={StockLineTotalPrice}>
+                        <div css={StockLineValue}>3,000</div>
+                        <div css={StockLineUnit}>￦</div>
+                    </div>
+                    <div css={StockLineTimeCard}>
+                        <div css={StockLineDate}>2022-10-20</div>
+                        <div css={StockLineTime}>PM 20:15</div>
+                    </div>
+                    <div css={StockLineStatus}>매도 대기중</div>
                 </div>
-                <div css={StockLineQuantity}>
-                    <div css={StockLineValue}>100</div>
-                    <div css={StockLineUnit}>주</div>
+                <div css={HLine}/>
+                <div css={StockLine}>
+                    <div css={StockLineNameCard}>
+                        <div css={StockLineName}>개꿀주</div>
+                        <div css={StockLineCode}>000000</div>
+                    </div>
+                    <div css={StockLineQuantity}>
+                        <div css={StockLineValue}>100,000</div>
+                        <div css={StockLineUnit}>주</div>
+                    </div>
+                    <div css={StockLinePrice}>
+                        <div css={StockLineValue}>5,000</div>
+                        <div css={StockLineUnit}>￦</div>
+                    </div>
+                    <div css={StockLineTotalPrice}>
+                        <div css={StockLineValue}>500,000,000</div>
+                        <div css={StockLineUnit}>￦</div>
+                    </div>
+                    <div css={StockLineTimeCard}>
+                        <div css={StockLineDate}>2022-10-20</div>
+                        <div css={StockLineTime}>PM 13:15</div>
+                    </div>
+                    <div css={StockLineStatus}>거래 완료</div>
                 </div>
-                <div css={StockLinePrice}>
-                    <div css={StockLineValue}>30</div>
-                    <div css={StockLineUnit}>￦</div>
-                </div>
-                <div css={StockLineTotalPrice}>
-                    <div css={StockLineValue}>3,000</div>
-                    <div css={StockLineUnit}>￦</div>
-                </div>
-                <div css={StockLineTimeCard}>
-                    <div css={StockLineDate}>2022-10-20</div>
-                    <div css={StockLineTime}>PM 20:15</div>
-                </div>
-                <div css={StockLineStatus}>매도 대기중</div>
+                <div css={HLine}/>
+                <div css={StockLine}><div css={StockLineNameCard}/></div>
+                <div css={HLine}/>
+                <div css={StockLine}><div css={StockLineNameCard}/></div>
+                <div css={HLine}/>
+                <div css={StockLine}><div css={StockLineNameCard}/></div>
+                <div css={HLine}/>
+                <div css={StockLine}><div css={StockLineNameCard}/></div>
+                <div css={HLine}/>
+                <div css={StockLine}><div css={StockLineNameCard}/></div>
+                <div css={HLine}/>
+                <div css={StockLine}><div css={StockLineNameCard}/></div>
+                <div css={HLine}/>
+                <div css={StockLine}><div css={StockLineNameCard}/></div>
+                <div css={HLine}/>
+                <div css={StockLine}><div css={StockLineNameCard}/></div>
+                <div css={HLine}/>
+                <div css={StockLine}><div css={StockLineNameCard}/></div>
+                <div css={HLine}/>
+                <div css={StockLine}><div css={StockLineNameCard}/></div>
+                <div css={HLine}/>
+                <div css={StockLine}><div css={StockLineNameCard}/></div>
+                <div css={HLine}/>
+                <div css={StockLine}><div css={StockLineNameCard}/></div>
             </div>
-            <div css={HLine}/>
-            <div css={StockLine}>
-                <div css={StockLineNameCard}>
-                    <div css={StockLineName}>개꿀주</div>
-                    <div css={StockLineCode}>000000</div>
-                </div>
-                <div css={StockLineQuantity}>
-                    <div css={StockLineValue}>100,000</div>
-                    <div css={StockLineUnit}>주</div>
-                </div>
-                <div css={StockLinePrice}>
-                    <div css={StockLineValue}>5,000</div>
-                    <div css={StockLineUnit}>￦</div>
-                </div>
-                <div css={StockLineTotalPrice}>
-                    <div css={StockLineValue}>500,000,000</div>
-                    <div css={StockLineUnit}>￦</div>
-                </div>
-                <div css={StockLineTimeCard}>
-                    <div css={StockLineDate}>2022-10-20</div>
-                    <div css={StockLineTime}>PM 13:15</div>
-                </div>
-                <div css={StockLineStatus}>거래 완료</div>
-            </div>
-            <div css={HLine}/>
-            <div css={StockLine}/>
-            <div css={HLine}/>
-            <div css={StockLine}/>
-            <div css={HLineBold}/>
         </div>
     )
 }
