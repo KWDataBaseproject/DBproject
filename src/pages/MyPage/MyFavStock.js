@@ -51,6 +51,18 @@ const HeaderLineName = css`
     width: 16%;
     text-align: center;
 `
+
+const HeaderLineCurrentPrice = css`
+    width: 16%;
+    text-align: center;
+`
+
+const HeaderLineFluctuationRate = css`
+    width: 16%;
+    text-align: center;
+`
+
+
 const StockLine = css`
     width: 100%;
     height: 50px;
@@ -82,6 +94,11 @@ function MyFavStock(){
             <div css={HLineBold}/>
             <div css={HeaderLine}>
                 <div css={HeaderLineName}>종목명</div>
+                <div css={HeaderLineCurrentPrice}>현재가</div>
+                <div css={HeaderLineName}>등락률</div>
+                <div css={HeaderLineName}>거래량</div>
+                <div css={HeaderLineName}>매출액</div>
+                <div css={HeaderLineName}>시가총액</div>
             </div>
             <div css={HLineBold}/>
             <div css={StockList}>
