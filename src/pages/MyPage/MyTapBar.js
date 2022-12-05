@@ -21,7 +21,7 @@ const TapButtons = css`
     cursor: pointer;
 `
 
-function MyTapBar({tapIndex, setTapIndex}){
+function MyTapBar({tapIndex, setTapIndex, auth}){
     return(
         <div css={ComponentLayOut}>
             <div css={Tap}>
@@ -37,6 +37,13 @@ function MyTapBar({tapIndex, setTapIndex}){
                 <div css={TapButtons} onClick={()=>{setTapIndex(3);}}>
                     <TapButton content="회원정보 관리" index={3} tapIndex={tapIndex} />
                 </div>
+                {auth === 2 ?
+                    <div css={TapButtons} onClick={()=>{setTapIndex(4);}}>
+                        <TapButton content="관리자 기능" index={4} tapIndex={tapIndex} />
+                    </div>
+                :
+                    null                
+                }
             </div>
         </div>
     )
