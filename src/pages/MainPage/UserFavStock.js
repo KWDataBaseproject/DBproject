@@ -26,8 +26,8 @@ const HLine = css`
 `
 
 const TextLine = css`
-    margin-top: 5px;
-    margin-bottom: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     height: 20px;
     width: 100%;
     display: flex;
@@ -37,6 +37,7 @@ const TextLine = css`
         transform: translateY(0px);
         transition: 0.3s;
     }
+    cursor: pointer;
 `
 
 const StockNameBox = css`
@@ -71,6 +72,15 @@ const StockChange = css`
     text-align: right;
 `
 
+const EmptyLine = css`
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+`
+
 function UserFavStock(){
     return(
         <div css={ComponentLayOut}>
@@ -85,13 +95,13 @@ function UserFavStock(){
                 <div css={StockChange}>-2,050 ￦(4.12%)</div>
             </div>
             <div css={HLine}></div>
-            <div css={TextLine}></div>
+            <div css={EmptyLine}></div>
             <div css={HLine}></div>
-            <div css={TextLine}></div>
+            <div css={EmptyLine}></div>
             <div css={HLine}></div>
-            <div css={TextLine}></div>
+            <div css={EmptyLine}></div>
             <div css={HLine}></div>
-            <div css={TextLine}></div>
+            <div css={EmptyLine}></div>
             <div css={HLineBold}></div>
         </div>
     )
