@@ -85,55 +85,55 @@ flex-direction: column;
 justify-content: center;
 `
 const StockLineName = css`
-font-size: 18px;
-text-align: center;
+    font-size: 18px;
+    text-align: center;
 `
 const StockLineCode = css`
-font-size: 13px;
-color: grey;
-margin-top: -4px;
-text-align: center;
+    font-size: 13px;
+    color: grey;
+    margin-top: -4px;
+    text-align: center;
 `
 const StockLineQuantity = css`
-width: 16%;
-display: flex;
-line-height: 50px;
-text-align: right;
-font-size: 15px;
+    width: 16%;
+    display: flex;
+    line-height: 50px;
+    text-align: right;
+    font-size: 15px;
 `
 const StockLinePrice = css`
-width: 16%;
-display: flex;
-line-height: 50px;
-text-align: right;
-font-size: 15px;
+    width: 16%;
+    display: flex;
+    line-height: 50px;
+    text-align: right;
+    font-size: 15px;
 `
 const StockLineTotalPrice = css`
-width: 16%;
-display: flex;
-line-height: 50px;
-text-align: right;
-font-size: 15px;
+    width: 16%;
+    display: flex;
+    line-height: 50px;
+    text-align: right;
+    font-size: 15px;
 `
 const StockLineTimeCard = css`
-width: 16%;
-display: flex;
-flex-direction: column;
-justify-content: center;
-font-size:15px;
+    width: 16%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size:15px;
 `
 const StockLineDate = css`
-text-align:center;
+    text-align:center;
 `
 const StockLineTime = css`
-text-align:center;
-margin-top: -5px;
+    text-align:center;
+    margin-top: -5px;
 `
 const StockLineStatus = css`
-width: 16%;
-line-height: 50px;
-text-align: center;
-font-size: 15px;
+    width: 16%;
+    line-height: 50px;
+    text-align: center;
+    font-size: 15px;
 `
 const StockLineValue = css`
     width: 75%;

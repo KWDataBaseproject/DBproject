@@ -32,11 +32,6 @@ const PageRow = css`
     padding-bottom: 35px;
 `
 
-const VLine = css`
-    border-right: 1px solid black;
-    width: 0px;
-`
-
 function MainPage(){
     return(
         <div css={PageLayOut}>

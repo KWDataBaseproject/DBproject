@@ -18,16 +18,7 @@ const Tap = css`
 
 const TapButtons = css`
     width: 15%;
-`
-
-const HLineBold = css`
-    border-bottom: 1px solid black;
-    height: 0px;
-`
-
-const HLine = css`
-    border-bottom: 1px solid #e0e0e0;
-    height: 0px;
+    cursor: pointer;
 `
 
 function MyTapBar({tapIndex, setTapIndex}){

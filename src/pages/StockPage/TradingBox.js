@@ -17,6 +17,7 @@ const Tap = css`
 
 const TapButtons = css`
     width: 30%;
+    cursor: pointer;
 `
 
 const InputBox = css`
@@ -72,6 +73,7 @@ const SendButton = css`
     font-size: 15px;
     line-height: 30px;
     color: white;
+    cursor: pointer;
 `
 
 const ResetButton = css`
@@ -83,6 +85,7 @@ const ResetButton = css`
     font-size: 15px;
     line-height: 30px;
     color: white;
+    cursor: pointer;
 `
 
 function TradingBox(){
@@ -90,15 +93,15 @@ function TradingBox(){
     return(
         <div css={ComponentLayOut}>
             <div css={Tap}>
-                <a css={TapButtons} onClick={()=>{setTapIndex(0);}}>
+                <div css={TapButtons} onClick={()=>{setTapIndex(0);}}>
                     <TapButton content={"매수"} index={0} tapIndex={tapIndex}/>
-                </a>
-                <a css={TapButtons} onClick={()=>{setTapIndex(1);}}>
+                </div>
+                <div css={TapButtons} onClick={()=>{setTapIndex(1);}}>
                     <TapButton content={"매도"} index={1} tapIndex={tapIndex}/>
-                </a>
-                <a css={TapButtons} onClick={()=>{setTapIndex(2);}}>
+                </div>
+                <div css={TapButtons} onClick={()=>{setTapIndex(2);}}>
                     <TapButton content={"거래내역"} index={2} tapIndex={tapIndex}/>
-                </a>
+                </div>
             </div>
             <div css={InputBox}>
                 <div css={InputBoxLine}>

@@ -46,17 +46,18 @@ const RowLine = css`
 `;
 
 const NewsBox = css`
-  width: 49.9%;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  &:hover {
-    background: #e0e0e0;
-    transform: translateY(0px);
-    transition: 0.3s;
-  }
-`;
+    width: 49.9%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    &:hover{
+        background: #E0E0E0;
+        transform: translateY(0px);
+        transition: 0.3s;
+    }
+    cursor:pointer;
+`
 
 const ImageBox = css`
   width: 50%;
@@ -125,166 +126,137 @@ const PostContent = css`
   line-height: 26px;
 `;
 
-function NewsBoard() {
-  return (
-    <div css={ComponentLayOut}>
-      <div css={Title}>뉴스</div>
-      <div css={HLineBold}></div>
-      <div css={RowLine}>
-        <div css={NewsBox}>
-          <div css={ImageBox}>
-            <img css={Image} src={image}></img>
-            <div css={PostInform}>
-              <div css={PostWriter}>서울경제</div>
-              <div css={PostTime}>2022.10.20</div>
+function NewsBoard(){
+    return(
+        <div css={ComponentLayOut}>
+            <div css={Title}>뉴스</div>
+            <div css={HLineBold}></div>
+            <div css={RowLine}>
+                <div css={NewsBox}>
+                    <div css={ImageBox}>
+                        <img css={Image} src={image} alt="NEWSIMAGE"></img>
+                        <div css={PostInform}>
+                            <div css={PostWriter}>서울경제</div>
+                            <div css={PostTime}>2022.10.20</div>
+                        </div>
+                    </div>
+                    <div css={TitleBox}>
+                        <div css={PostTitle}>달러 약세 vs 저가 매수…환율, 1300원선 출발 예상[외환브리핑]
+                        </div>
+                        <div css={PostContent}>미국 달러인덱스 고용 지표 대기, 104선 하락 중국 위안화 역외서 7.03위안대 등락, 보합권 뉴욕증시 혼조세 마감, 국내증시 외국인 주목</div>
+                    </div>
+                </div>
+                <div css={VLine}></div>
+                <div css={NewsBox}>
+                    <div css={ImageBox}>
+                        <img css={Image} src={image} alt="NEWSIMAGE"></img>
+                        <div css={PostInform}>
+                            <div css={PostWriter}>서울경제</div>
+                            <div css={PostTime}>2022.10.20</div>
+                        </div>
+                    </div>
+                    <div css={TitleBox}>
+                        <div css={PostTitle}>달러 약세 vs 저가 매수…환율, 1300원선 출발 예상[외환브리핑]
+                        </div>
+                        <div css={PostContent}>미국 달러인덱스 고용 지표 대기, 104선 하락 중국 위안화 역외서 7.03위안대 등락, 보합권 뉴욕증시 혼조세 마감, 국내증시 외국인 주목</div>
+                    </div>
+                </div>           
             </div>
-          </div>
-          <div css={TitleBox}>
-            <div css={PostTitle}>
-              달러 약세 vs 저가 매수…환율, 1300원선 출발 예상[외환브리핑]
+            <div css={HLine}></div>
+            <div css={RowLine}>
+                <div css={NewsBox}>
+                    <div css={ImageBox}>
+                        <img css={Image} src={image} alt="NEWSIMAGE"></img>
+                        <div css={PostInform}>
+                            <div css={PostWriter}>서울경제</div>
+                            <div css={PostTime}>2022.10.20</div>
+                        </div>
+                    </div>
+                    <div css={TitleBox}>
+                        <div css={PostTitle}>달러 약세 vs 저가 매수…환율, 1300원선 출발 예상[외환브리핑]
+                        </div>
+                        <div css={PostContent}>미국 달러인덱스 고용 지표 대기, 104선 하락 중국 위안화 역외서 7.03위안대 등락, 보합권 뉴욕증시 혼조세 마감, 국내증시 외국인 주목</div>
+                    </div>
+                </div>
+                <div css={VLine}></div>
+                <div css={NewsBox}>
+                    <div css={ImageBox}>
+                        <img css={Image} src={image} alt="NEWSIMAGE"></img>
+                        <div css={PostInform}>
+                            <div css={PostWriter}>서울경제</div>
+                            <div css={PostTime}>2022.10.20</div>
+                        </div>
+                    </div>
+                    <div css={TitleBox}>
+                        <div css={PostTitle}>달러 약세 vs 저가 매수…환율, 1300원선 출발 예상[외환브리핑]
+                        </div>
+                        <div css={PostContent}>미국 달러인덱스 고용 지표 대기, 104선 하락 중국 위안화 역외서 7.03위안대 등락, 보합권 뉴욕증시 혼조세 마감, 국내증시 외국인 주목</div>
+                    </div>
+                </div>           
             </div>
-            <div css={PostContent}>
-              미국 달러인덱스 고용 지표 대기, 104선 하락 중국 위안화 역외서
-              7.03위안대 등락, 보합권 뉴욕증시 혼조세 마감, 국내증시 외국인 주목
+            <div css={HLine}></div>
+            <div css={RowLine}>
+                <div css={NewsBox}>
+                    <div css={ImageBox}>
+                        <img css={Image} src={image} alt="NEWSIMAGE"></img>
+                        <div css={PostInform}>
+                            <div css={PostWriter}>서울경제</div>
+                            <div css={PostTime}>2022.10.20</div>
+                        </div>
+                    </div>
+                    <div css={TitleBox}>
+                        <div css={PostTitle}>달러 약세 vs 저가 매수…환율, 1300원선 출발 예상[외환브리핑]
+                        </div>
+                        <div css={PostContent}>미국 달러인덱스 고용 지표 대기, 104선 하락 중국 위안화 역외서 7.03위안대 등락, 보합권 뉴욕증시 혼조세 마감, 국내증시 외국인 주목</div>
+                    </div>
+                </div>
+                <div css={VLine}></div>
+                <div css={NewsBox}>
+                    <div css={ImageBox}>
+                        <img css={Image} src={image} alt="NEWSIMAGE"></img>
+                        <div css={PostInform}>
+                            <div css={PostWriter}>서울경제</div>
+                            <div css={PostTime}>2022.10.20</div>
+                        </div>
+                    </div>
+                    <div css={TitleBox}>
+                        <div css={PostTitle}>달러 약세 vs 저가 매수…환율, 1300원선 출발 예상[외환브리핑]
+                        </div>
+                        <div css={PostContent}>미국 달러인덱스 고용 지표 대기, 104선 하락 중국 위안화 역외서 7.03위안대 등락, 보합권 뉴욕증시 혼조세 마감, 국내증시 외국인 주목</div>
+                    </div>
+                </div>           
             </div>
-          </div>
-        </div>
-        <div css={VLine}></div>
-        <div css={NewsBox}>
-          <div css={ImageBox}>
-            <img css={Image} src={image}></img>
-            <div css={PostInform}>
-              <div css={PostWriter}>서울경제</div>
-              <div css={PostTime}>2022.10.20</div>
-            </div>
-          </div>
-          <div css={TitleBox}>
-            <div css={PostTitle}>
-              달러 약세 vs 저가 매수…환율, 1300원선 출발 예상[외환브리핑]
-            </div>
-            <div css={PostContent}>
-              미국 달러인덱스 고용 지표 대기, 104선 하락 중국 위안화 역외서
-              7.03위안대 등락, 보합권 뉴욕증시 혼조세 마감, 국내증시 외국인 주목
-            </div>
-          </div>
-        </div>
-      </div>
-      <div css={HLine}></div>
-      <div css={RowLine}>
-        <div css={NewsBox}>
-          <div css={ImageBox}>
-            <img css={Image} src={image}></img>
-            <div css={PostInform}>
-              <div css={PostWriter}>서울경제</div>
-              <div css={PostTime}>2022.10.20</div>
-            </div>
-          </div>
-          <div css={TitleBox}>
-            <div css={PostTitle}>
-              달러 약세 vs 저가 매수…환율, 1300원선 출발 예상[외환브리핑]
-            </div>
-            <div css={PostContent}>
-              미국 달러인덱스 고용 지표 대기, 104선 하락 중국 위안화 역외서
-              7.03위안대 등락, 보합권 뉴욕증시 혼조세 마감, 국내증시 외국인 주목
-            </div>
-          </div>
-        </div>
-        <div css={VLine}></div>
-        <div css={NewsBox}>
-          <div css={ImageBox}>
-            <img css={Image} src={image}></img>
-            <div css={PostInform}>
-              <div css={PostWriter}>서울경제</div>
-              <div css={PostTime}>2022.10.20</div>
-            </div>
-          </div>
-          <div css={TitleBox}>
-            <div css={PostTitle}>
-              달러 약세 vs 저가 매수…환율, 1300원선 출발 예상[외환브리핑]
-            </div>
-            <div css={PostContent}>
-              미국 달러인덱스 고용 지표 대기, 104선 하락 중국 위안화 역외서
-              7.03위안대 등락, 보합권 뉴욕증시 혼조세 마감, 국내증시 외국인 주목
-            </div>
-          </div>
-        </div>
-      </div>
-      <div css={HLine}></div>
-      <div css={RowLine}>
-        <div css={NewsBox}>
-          <div css={ImageBox}>
-            <img css={Image} src={image}></img>
-            <div css={PostInform}>
-              <div css={PostWriter}>서울경제</div>
-              <div css={PostTime}>2022.10.20</div>
-            </div>
-          </div>
-          <div css={TitleBox}>
-            <div css={PostTitle}>
-              달러 약세 vs 저가 매수…환율, 1300원선 출발 예상[외환브리핑]
-            </div>
-            <div css={PostContent}>
-              미국 달러인덱스 고용 지표 대기, 104선 하락 중국 위안화 역외서
-              7.03위안대 등락, 보합권 뉴욕증시 혼조세 마감, 국내증시 외국인 주목
-            </div>
-          </div>
-        </div>
-        <div css={VLine}></div>
-        <div css={NewsBox}>
-          <div css={ImageBox}>
-            <img css={Image} src={image}></img>
-            <div css={PostInform}>
-              <div css={PostWriter}>서울경제</div>
-              <div css={PostTime}>2022.10.20</div>
-            </div>
-          </div>
-          <div css={TitleBox}>
-            <div css={PostTitle}>
-              달러 약세 vs 저가 매수…환율, 1300원선 출발 예상[외환브리핑]
-            </div>
-            <div css={PostContent}>
-              미국 달러인덱스 고용 지표 대기, 104선 하락 중국 위안화 역외서
-              7.03위안대 등락, 보합권 뉴욕증시 혼조세 마감, 국내증시 외국인 주목
-            </div>
-          </div>
-        </div>
-      </div>
-      <div css={HLine}></div>
-      <div css={RowLine}>
-        <div css={NewsBox}>
-          <div css={ImageBox}>
-            <img css={Image} src={image}></img>
-            <div css={PostInform}>
-              <div css={PostWriter}>서울경제</div>
-              <div css={PostTime}>2022.10.20</div>
-            </div>
-          </div>
-          <div css={TitleBox}>
-            <div css={PostTitle}>
-              달러 약세 vs 저가 매수…환율, 1300원선 출발 예상[외환브리핑]
-            </div>
-            <div css={PostContent}>
-              미국 달러인덱스 고용 지표 대기, 104선 하락 중국 위안화 역외서
-              7.03위안대 등락, 보합권 뉴욕증시 혼조세 마감, 국내증시 외국인 주목
-            </div>
-          </div>
-        </div>
-        <div css={VLine}></div>
-        <div css={NewsBox}>
-          <div css={ImageBox}>
-            <img css={Image} src={image}></img>
-            <div css={PostInform}>
-              <div css={PostWriter}>서울경제</div>
-              <div css={PostTime}>2022.10.20</div>
-            </div>
-          </div>
-          <div css={TitleBox}>
-            <div css={PostTitle}>
-              달러 약세 vs 저가 매수…환율, 1300원선 출발 예상[외환브리핑]
-            </div>
-            <div css={PostContent}>
-              미국 달러인덱스 고용 지표 대기, 104선 하락 중국 위안화 역외서
-              7.03위안대 등락, 보합권 뉴욕증시 혼조세 마감, 국내증시 외국인 주목
+            <div css={HLine}></div>
+            <div css={RowLine}>
+                <div css={NewsBox}>
+                    <div css={ImageBox}>
+                        <img css={Image} src={image} alt="NEWSIMAGE"></img>
+                        <div css={PostInform}>
+                            <div css={PostWriter}>서울경제</div>
+                            <div css={PostTime}>2022.10.20</div>
+                        </div>
+                    </div>
+                    <div css={TitleBox}>
+                        <div css={PostTitle}>달러 약세 vs 저가 매수…환율, 1300원선 출발 예상[외환브리핑]
+                        </div>
+                        <div css={PostContent}>미국 달러인덱스 고용 지표 대기, 104선 하락 중국 위안화 역외서 7.03위안대 등락, 보합권 뉴욕증시 혼조세 마감, 국내증시 외국인 주목</div>
+                    </div>
+                </div>
+                <div css={VLine}></div>
+                <div css={NewsBox}>
+                    <div css={ImageBox}>
+                        <img css={Image} src={image} alt="NEWSIMAGE"></img>
+                        <div css={PostInform}>
+                            <div css={PostWriter}>서울경제</div>
+                            <div css={PostTime}>2022.10.20</div>
+                        </div>
+                    </div>
+                    <div css={TitleBox}>
+                        <div css={PostTitle}>달러 약세 vs 저가 매수…환율, 1300원선 출발 예상[외환브리핑]
+                        </div>
+                        <div css={PostContent}>미국 달러인덱스 고용 지표 대기, 104선 하락 중국 위안화 역외서 7.03위안대 등락, 보합권 뉴욕증시 혼조세 마감, 국내증시 외국인 주목</div>
+                    </div>
+                </div>
             </div>
           </div>
         </div>
