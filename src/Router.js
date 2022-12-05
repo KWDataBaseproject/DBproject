@@ -8,7 +8,7 @@ import MyPage from './pages/MyPage/MyPage';
 import BoardPage from './pages/BoardPage/BoardPage';
 import NewsPage from './pages/NewsPage/NewsPage';
 import StockPage from './pages/StockPage/StockPage';
-import LogInModal from './common/LogInModal';
+import Modal from './common/Modal';
 
 const Font = css`
     font-family: 'Noto Sans KR', sans-serif;
@@ -47,19 +47,19 @@ const Page = css`
 
 function Router() {
     const [pageIndex, setPageIndex] = useState(0);
-    const [auth, setAuth] = useState(false);
+    const [auth, setAuth] = useState(0);
     const [logInModal, setLogInModal] = useState(false);
     return (
         <div css={Font}>
             <BrowserRouter>
-                <LogInModal setAuth={setAuth} logInModal={logInModal} setLogInModal={setLogInModal}/>
-                <div css={Header}><Navigation setLogInModal = {setLogInModal} auth = {auth} pageIndex={pageIndex} setPageIndex={setPageIndex}/></div>
+                <Modal setAuth={setAuth} logInModal={logInModal} setLogInModal={setLogInModal}/>
+                <div css={Header}><Navigation setLogInModal = {setLogInModal} auth = {auth} setAuth = {setAuth} pageIndex={pageIndex} setPageIndex={setPageIndex}/></div>
                 <div css={Body}>
                     <div css={Page} id="Page" name="Page">
                         <Routes>
                             <Route exact path ="/" element={<MainPage/>}/>
                             <Route path ="/DBproject" element={<MainPage/>}/>
-                            <Route path ="/profile" element={<MyPage setAuth={setAuth}/>}/>
+                            <Route path ="/profile" element={<MyPage auth={auth}/>}/>
                             <Route path ="/news" element={<NewsPage/>}/>
                             <Route path ="/board" element={<BoardPage/>}/>
                             <Route path ="/stock" element={<StockPage/>}/>

@@ -72,7 +72,14 @@ const ActiveButton = css`
     line-height: 40px;
 `
 
-function Navigation({setLogInModal, auth, pageIndex, setPageIndex}){
+const TestButton = css`
+    position: fixed;
+    left: 85%;
+    top: 8%;
+    cursor: pointer;
+`
+
+function Navigation({setLogInModal, auth, setAuth, pageIndex, setPageIndex}){
     
     return(
         <div css={Nav}>
@@ -132,6 +139,7 @@ function Navigation({setLogInModal, auth, pageIndex, setPageIndex}){
                     </div>
                 </NavLink>
                 }
+                <div onClick={()=>{setAuth(0);}}><button css={TestButton}>LOG OUT TEST({auth})</button></div>
             </div>
         </div>
     )
