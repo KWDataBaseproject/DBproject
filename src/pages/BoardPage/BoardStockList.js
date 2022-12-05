@@ -50,12 +50,13 @@ const Tap = css`
 
 const TapButtons = css`
     width: 30%;
+    cursor: pointer;
 `
 
 
 const List = css`
     width: 100%;
-    height: 80vh;
+    height: 735px;
     display: flex;
     flex-direction: column;
     overflow-Y: auto;
@@ -66,6 +67,7 @@ const List = css`
       border-radius: 2px;
       background: #ccc;
     }
+    border-bottom: 1px solid black;
 `
 
 const HLineBold = css`
@@ -128,6 +130,7 @@ const AlignButtonDesc = css`
         transform: translateY(0px);
         transition: 0.3s;
     }
+    cursor: pointer;
 `
 
 const AlignButtonAsc = css`
@@ -144,11 +147,12 @@ const AlignButtonAsc = css`
         transform: translateY(0px);
         transition: 0.3s;
     }
+    cursor: pointer;
 `
 
 const TextLine = css`
-    margin-top: 5px;
-    margin-bottom: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     height: 21px;
     width: 100%;
     display: flex;
@@ -158,6 +162,16 @@ const TextLine = css`
         transform: translateY(0px);
         transition: 0.3s;
     }
+    cursor: pointer;
+`
+
+const EmptyLine = css`
+    padding-top: 5px;
+    padding-bottom: 5px;
+    height: 21px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 `
 
 const StockNameBox = css`
@@ -208,17 +222,16 @@ function BoardStockList(){
                 <div css={SearchButton}>검색</div>
             </div>
             <div css={Tap}>
-                <a css={TapButtons} onClick={()=>{setTapIndex(0);}}>
+                <div css={TapButtons} onClick={()=>{setTapIndex(0);}}>
                     <TapButton content={"전체종목"} index={0} tapIndex={tapIndex}/>
-                </a>
-                <a css={TapButtons} onClick={()=>{setTapIndex(1);}}>
+                </div>
+                <div css={TapButtons} onClick={()=>{setTapIndex(1);}}>
                     <TapButton content={"보유종목"} index={1} tapIndex={tapIndex}/>
-                </a>
-                <a css={TapButtons} onClick={()=>{setTapIndex(2);}}>
+                </div>
+                <div css={TapButtons} onClick={()=>{setTapIndex(2);}}>
                     <TapButton content={"관심종목"} index={2} tapIndex={tapIndex}/>
-                </a>
+                </div>
             </div>
-            <div css={List}>
                 <div css={HeaderLine}>
                     <div css={HeaderName}>
                         종목명<div css={nameAlignDesc ? AlignButtonDesc : AlignButtonAsc} onClick={() => {setNameAlignDesc((prev) => {return !prev;})}}/>
@@ -231,6 +244,7 @@ function BoardStockList(){
                     </div>
                 </div>
                 <div css={HLine}></div>
+            <div css={List}>
                 <div css={TextLine}>
                     <div css={StockNameBox}>
                         <div css={StockName}>카카오</div>
@@ -419,34 +433,10 @@ function BoardStockList(){
                     <div css={StockPrice}>47,750 ￦</div>
                     <div css={StockChange}>-2,050 ￦(4.12%)</div>
                 </div>
-                <div css={HLine}></div>
-                <div css={TextLine}>
-                    <div css={StockNameBox}>
-                        <div css={StockName}>카카오</div>
-                        <div css={StockCode}>KRX: 035720</div>
-                    </div>
-                    <div css={StockPrice}>47,750 ￦</div>
-                    <div css={StockChange}>-2,050 ￦(4.12%)</div>
-                </div>
-                <div css={HLine}></div>
-                <div css={TextLine}>
-                    <div css={StockNameBox}>
-                        <div css={StockName}>카카오</div>
-                        <div css={StockCode}>KRX: 035720</div>
-                    </div>
-                    <div css={StockPrice}>47,750 ￦</div>
-                    <div css={StockChange}>-2,050 ￦(4.12%)</div>
-                </div>
-                <div css={HLine}></div>
-                <div css={TextLine}>
-                    <div css={StockNameBox}>
-                        <div css={StockName}>카카오</div>
-                        <div css={StockCode}>KRX: 035720</div>
-                    </div>
-                    <div css={StockPrice}>47,750 ￦</div>
-                    <div css={StockChange}>-2,050 ￦(4.12%)</div>
-                </div>
-                <div css={HLineBold}></div>
+                <div css={HLine}/>
+                <div css={EmptyLine}/>
+                <div css={HLine}/>
+                <div css={EmptyLine}/>
             </div>
         </div>
     )

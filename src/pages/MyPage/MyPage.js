@@ -29,11 +29,6 @@ const HLineBold = css`
     height: 0px;
 `
 
-const HLine = css`
-    border-bottom: 1px solid #e0e0e0;
-    height: 0px;
-`
-
 const MyPageUserInform = css`
     margin-top: 15px;
     width = 100%;

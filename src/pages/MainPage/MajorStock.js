@@ -39,8 +39,8 @@ const HLine = css`
 `
 
 const TextLine = css`
-    margin-top: 5px;
-    margin-bottom: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     height: 30px;
     width: 100%;
     display: flex;
@@ -50,6 +50,7 @@ const TextLine = css`
         transform: translateY(0px);
         transition: 0.3s;
     }
+    cursor: pointer;
 `
 
 const StockNameBox = css`
@@ -89,11 +90,6 @@ const StockTotal = css`
     width: 30%;
     line-height: 30px;
     text-align: right;
-`
-
-const VLine = css`
-    border-right: 1px solid black;
-    width: 0px;
 `
 
 const ChartBox = css`
@@ -170,7 +166,7 @@ function MajorStock(){
                 <div css={Title}>삼성전자</div>
                 <div css={HLineBold}></div>
                 <div css={ChartBox}>
-                    <img css={Chart} src={test}/>
+                    <img css={Chart} src={test} alt="CHART"/>
                 </div>
                 <div css={HLineBold}></div>
             </div>

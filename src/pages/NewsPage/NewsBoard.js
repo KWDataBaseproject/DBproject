@@ -57,6 +57,7 @@ const NewsBox = css`
         transform: translateY(0px);
         transition: 0.3s;
     }
+    cursor:pointer;
 `
 
 const ImageBox = css`
@@ -139,7 +140,7 @@ function NewsBoard(){
             <div css={RowLine}>
                 <div css={NewsBox}>
                     <div css={ImageBox}>
-                        <img css={Image} src={image}></img>
+                        <img css={Image} src={image} alt="NEWSIMAGE"></img>
                         <div css={PostInform}>
                             <div css={PostWriter}>서울경제</div>
                             <div css={PostTime}>2022.10.20</div>
@@ -154,7 +155,7 @@ function NewsBoard(){
                 <div css={VLine}></div>
                 <div css={NewsBox}>
                     <div css={ImageBox}>
-                        <img css={Image} src={image}></img>
+                        <img css={Image} src={image} alt="NEWSIMAGE"></img>
                         <div css={PostInform}>
                             <div css={PostWriter}>서울경제</div>
                             <div css={PostTime}>2022.10.20</div>
@@ -171,7 +172,7 @@ function NewsBoard(){
             <div css={RowLine}>
                 <div css={NewsBox}>
                     <div css={ImageBox}>
-                        <img css={Image} src={image}></img>
+                        <img css={Image} src={image} alt="NEWSIMAGE"></img>
                         <div css={PostInform}>
                             <div css={PostWriter}>서울경제</div>
                             <div css={PostTime}>2022.10.20</div>
@@ -186,7 +187,7 @@ function NewsBoard(){
                 <div css={VLine}></div>
                 <div css={NewsBox}>
                     <div css={ImageBox}>
-                        <img css={Image} src={image}></img>
+                        <img css={Image} src={image} alt="NEWSIMAGE"></img>
                         <div css={PostInform}>
                             <div css={PostWriter}>서울경제</div>
                             <div css={PostTime}>2022.10.20</div>
@@ -203,7 +204,7 @@ function NewsBoard(){
             <div css={RowLine}>
                 <div css={NewsBox}>
                     <div css={ImageBox}>
-                        <img css={Image} src={image}></img>
+                        <img css={Image} src={image} alt="NEWSIMAGE"></img>
                         <div css={PostInform}>
                             <div css={PostWriter}>서울경제</div>
                             <div css={PostTime}>2022.10.20</div>
@@ -218,7 +219,7 @@ function NewsBoard(){
                 <div css={VLine}></div>
                 <div css={NewsBox}>
                     <div css={ImageBox}>
-                        <img css={Image} src={image}></img>
+                        <img css={Image} src={image} alt="NEWSIMAGE"></img>
                         <div css={PostInform}>
                             <div css={PostWriter}>서울경제</div>
                             <div css={PostTime}>2022.10.20</div>
@@ -235,7 +236,7 @@ function NewsBoard(){
             <div css={RowLine}>
                 <div css={NewsBox}>
                     <div css={ImageBox}>
-                        <img css={Image} src={image}></img>
+                        <img css={Image} src={image} alt="NEWSIMAGE"></img>
                         <div css={PostInform}>
                             <div css={PostWriter}>서울경제</div>
                             <div css={PostTime}>2022.10.20</div>
@@ -250,7 +251,7 @@ function NewsBoard(){
                 <div css={VLine}></div>
                 <div css={NewsBox}>
                     <div css={ImageBox}>
-                        <img css={Image} src={image}></img>
+                        <img css={Image} src={image} alt="NEWSIMAGE"></img>
                         <div css={PostInform}>
                             <div css={PostWriter}>서울경제</div>
                             <div css={PostTime}>2022.10.20</div>

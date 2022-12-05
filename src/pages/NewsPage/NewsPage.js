@@ -20,29 +20,11 @@ const PageLayOut = css`
     animation: ${PageRender} 1s;
 `
 
-const PageRow = css`
-    margin-top: 30px;
-    width = 100%;
-    display: flex;
-    justify-content: space-between;
-    padding-top: 20px;
-    padding-bottom: 40px;
-`
-
-const VLine = css`
-    border-right: 1px solid black;
-    width: 0px;
-`
-
 function NewsPage(){
     return(
         <div css={PageLayOut}>
-            <div css={PageRow}>
-                <NewsBoard/>
-            </div>
-            <div css={PageRow}>
-                <NewsPagination/>
-            </div>
+            <NewsBoard/>
+            <NewsPagination/>
         </div>
     );
 }
