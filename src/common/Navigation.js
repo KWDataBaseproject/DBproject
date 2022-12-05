@@ -117,7 +117,7 @@ function Navigation({setLogInModal, auth, pageIndex, setPageIndex}){
                 onClick={()=>{setPageIndex(4);}}>
                     <div css={NavigationButton}>
                         <div css={pageIndex === 4 ? ActiveButton : ButtonInner}>
-                        프로필
+                        MY
                         </div>
                     </div>
                 </NavLink>
