@@ -4,6 +4,7 @@ import MyAccountSetting from './MyAccountSetting';
 import MyFavStock from './MyFavStock';
 import MyOwnedList from './MyOwnedList';
 import MyTradeList from './MyTradeList';
+import Admin from './Admin';
 
 const ComponentLayOut = css`
     width: 100%;
@@ -25,7 +26,14 @@ function MyDetail({tapIndex}){
                         (tapIndex === 3 ?
                             <MyAccountSetting/>
                         :
-                            "ERROR")))
+                            (tapIndex === 4 ?
+                                <Admin/>
+                            :
+                                "ERROR"
+                            )
+                        )
+                    )
+                )
             }
         </div>
     )

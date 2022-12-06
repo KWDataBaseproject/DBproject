@@ -48,6 +48,7 @@ const List = css`
 const ListLine = css` 
     display: flex;
     height: 35px;
+    font-size: 15px;
     line-height: 35px;
     justify-content: space-between;
     &:hover{

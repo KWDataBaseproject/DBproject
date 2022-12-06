@@ -88,11 +88,11 @@ const StockLine = css`
     justify-content: space-between;
 `
 const StockLineNameCard = css`
-width: 16%;
-display: flex;
-height: 50px;
-flex-direction: column;
-justify-content: center;
+    width: 16%;
+    display: flex;
+    height: 50px;
+    flex-direction: column;
+    justify-content: center;
 `
 const StockLineName = css`
     font-size: 18px;

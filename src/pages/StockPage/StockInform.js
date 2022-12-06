@@ -7,6 +7,7 @@ const ComponentLayOut = css`
     background: white;
     display: flex;
     flex-direction: column;
+    margin-bottom: 20px;
 `
 
 const HLineBold = css`
@@ -130,7 +131,7 @@ function StockInform(){
                             <div css={ValueUnit}>￦</div>
                         </div>
                     </div>
-                    <div css={HLineBold}/>
+                    <div css={HLine}/>
                     <div css={ChangeLine}>
                         <div css={ChangePercent}>- 4.12%</div>
                         <div css={ChangeValues}>
@@ -147,7 +148,7 @@ function StockInform(){
                             <div css={ValueUnit}>￦</div>
                         </div>
                     </div>
-                    <div css={HLineBold}/>
+                    <div css={HLine}/>
                     <div css={ValueBox}>
                         <div css={ValueTitle}>거래량</div>
                         <div css={ValueLine}>
@@ -157,6 +158,7 @@ function StockInform(){
                     </div>
                 </div>
             </div>
+            <div css={HLineBold}/>
         </div>
     )
 }

@@ -1,6 +1,5 @@
 /** @jsxImportSource @emotion/react */
 import { css, keyframes } from '@emotion/react';
-import { NavLink } from 'react-router-dom';
 import MyTapBar from './MyTapBar';
 import MyDetail from './MyDetail';
 import MyUserInform from './MyUserInform';
@@ -47,13 +46,7 @@ const MyPageDetail = css`
     display: flex;
 `
 
-const TestButton = css`
-    position: fixed;
-    left: 85%;
-    top: 8%;
-`
-
-function MyPage(setAuth){
+function MyPage({auth}){
     const [tapIndex, setTapIndex] = useState(0);
     return(
         <div css={PageLayOut}>
@@ -63,12 +56,11 @@ function MyPage(setAuth){
             </div>
             <div css={HLineBold}/>
             <div css={MyPageTap}>
-                <MyTapBar tapIndex={tapIndex} setTapIndex={setTapIndex}/>
+                <MyTapBar auth={auth} tapIndex={tapIndex} setTapIndex={setTapIndex}/>
             </div>
             <div css={MyPageDetail}>
                 <MyDetail tapIndex={tapIndex}/>
             </div>
-            <NavLink to ="/" onClick={()=>{setAuth(false);}}><button css={TestButton}>LOG OUT TEST</button></NavLink>
         </div>
     );
 }
