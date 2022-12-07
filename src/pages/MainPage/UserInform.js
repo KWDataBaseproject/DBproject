@@ -8,6 +8,8 @@ const ComponentLayOut = css`
 
 const LeftContent = css`
     width: 33%;
+    display: flex;
+    flex-direction: column;
 `
 
 const RightContent = css`
@@ -52,12 +54,45 @@ const HLineBold = css`
     height: 0px;
 `
 
+const CircleBox = css`
+    display: flex;
+    justify-content: center;
+`
+
+const Circle = css`
+    width: 146px;
+    height: 146px;
+    background: grey;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+`
+const CircleHAlign = css`
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+`
+const InnerCircle = css`
+    width: 60px;
+    height: 60px;
+    background: white;
+    border-radius: 50%;
+`
+
 function UserInform(){
     return(
         <div css={ComponentLayOut}>
             <div css={LeftContent}>
                 <div css={TextLine}>
                     <div css={UserNickName}>홍　길　동 님</div>
+                </div>
+                <div css={CircleBox}>
+                    <div css={Circle}>
+                        <div css={CircleHAlign}>
+                            <div css={InnerCircle}/>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div css={RightContent}>
