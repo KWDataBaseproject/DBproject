@@ -59,7 +59,7 @@ function MyPage({auth}){
                 <MyTapBar auth={auth} tapIndex={tapIndex} setTapIndex={setTapIndex}/>
             </div>
             <div css={MyPageDetail}>
-                <MyDetail tapIndex={tapIndex}/>
+                <MyDetail tapIndex={tapIndex} auth={auth}/>
             </div>
         </div>
     );

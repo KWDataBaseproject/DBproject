@@ -5,13 +5,14 @@ import MyFavStock from './MyFavStock';
 import MyOwnedList from './MyOwnedList';
 import MyTradeList from './MyTradeList';
 import Admin from './Admin';
+import AdminAccountSetting from './AdminAccountSetting';
 
 const ComponentLayOut = css`
     width: 100%;
     margin-top: 10px;
 `
 
-function MyDetail({tapIndex}){
+function MyDetail({tapIndex, auth}){
     return(
         <div css={ComponentLayOut}>
             {tapIndex === 0 ?
@@ -24,7 +25,11 @@ function MyDetail({tapIndex}){
                         <MyFavStock/>
                     :
                         (tapIndex === 3 ?
-                            <MyAccountSetting/>
+                            ( auth === 1 ? 
+                                <MyAccountSetting/>
+                            :
+                                <AdminAccountSetting/>
+                            )
                         :
                             (tapIndex === 4 ?
                                 <Admin/>
