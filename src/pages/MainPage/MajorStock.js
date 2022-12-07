@@ -1,5 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
+import { useState } from 'react';
 import test from './test.png';
 
 const ComponentLayOut = css`
@@ -36,6 +37,18 @@ const HLine = css`
     border-bottom: 1px solid #E0E0E0;
     height: 0px;
     width: 100%;
+`
+
+const ActiveTextLine = css`
+    padding-top: 5px;
+    padding-bottom: 5px;
+    height: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background: #E0E0E0;
+    cursor: pointer;
+    font-weight: bold;
 `
 
 const TextLine = css`
@@ -91,27 +104,55 @@ const StockTotal = css`
     line-height: 30px;
     text-align: right;
 `
-
+const Header = css`
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+`
+const DetailButton = css`
+    fonst-size: 12px;
+    margin-right: 5px;
+    line-height: 38px;
+    cursor: pointer;
+`
 const ChartBox = css`
     margin: 10px;
     height: 78%;
     display: flex;
     justify-content: center;
+    flex-direction:column;
 `
-
 const Chart = css`
     margin-top: 30px;
     width: 100%;
     height: 80%;
 `
+const Content = css`
+    display: flex;
+    justify-content: space-between;
+    height: 23px;
+    line-height: 23px;
+    font-size: 13px;
+`
+const ChartName = css`
+    font-size: 15px;
+`
+const ChartPrice = css`
+`
+const ChartChange = css`
+`
+const ChartTotal = css`
+    margin-right: 5px;
+`
 
 function MajorStock(){
+    const [listIndex, setListIndex] = useState(0);
     return(
         <div css={ComponentLayOut}>
             <div css={LeftContent}>
                 <div css={Title}>인기종목 TOP 5</div>
                 <div css={HLineBold}></div>
-                <div css={TextLine}>
+                <div css={listIndex === 1 ? ActiveTextLine : TextLine} onClick={()=>{setListIndex(1);}}>
                     <div css={StockNameBox}>
                         <div css={StockName}>삼성전자</div>
                         <div css={StockCode}>KRX: 005930</div>
@@ -121,7 +162,7 @@ function MajorStock(){
                     <div css={StockTotal}>331조 3,229억 원</div>
                 </div>
                 <div css={HLine}></div>
-                <div css={TextLine}>
+                <div css={listIndex === 2 ? ActiveTextLine : TextLine} onClick={()=>{setListIndex(2);}}>
                     <div css={StockNameBox}>
                         <div css={StockName}>카카오</div>
                         <div css={StockCode}>KRX: 035720</div>
@@ -131,7 +172,7 @@ function MajorStock(){
                     <div css={StockTotal}>21조 2,641억 원</div>
                 </div>
                 <div css={HLine}></div>
-                <div css={TextLine}>
+                <div css={listIndex === 3 ? ActiveTextLine : TextLine} onClick={()=>{setListIndex(3);}}>
                     <div css={StockNameBox}>
                         <div css={StockName}>이엔플러스</div>
                         <div css={StockCode}>KRX: 035720</div>
@@ -141,7 +182,7 @@ function MajorStock(){
                     <div css={StockTotal}>2,870억 원</div>
                 </div>
                 <div css={HLine}></div>
-                <div css={TextLine}>
+                <div css={listIndex === 4 ? ActiveTextLine : TextLine} onClick={()=>{setListIndex(4);}}>
                     <div css={StockNameBox}>
                         <div css={StockName}>이엔플러스</div>
                         <div css={StockCode}>KRX: 035720</div>
@@ -151,7 +192,7 @@ function MajorStock(){
                     <div css={StockTotal}>2,870억 원</div>
                 </div>
                 <div css={HLine}></div>
-                <div css={TextLine}>
+                <div css={listIndex === 5 ? ActiveTextLine : TextLine} onClick={()=>{setListIndex(5);}}>
                     <div css={StockNameBox}>
                         <div css={StockName}>이엔플러스</div>
                         <div css={StockCode}>KRX: 035720</div>
@@ -163,9 +204,18 @@ function MajorStock(){
                 <div css={HLineBold}></div>
             </div>
             <div css={RightContent}>
-                <div css={Title}>삼성전자</div>
+                <div css={Header}>
+                    <div css={Title}>미니차트</div>
+                    <div css={DetailButton}>더보기 +</div>
+                </div>
                 <div css={HLineBold}></div>
                 <div css={ChartBox}>
+                    <div css={Content}>
+                        <div css={ChartName}>삼성전자</div>
+                        <div css={ChartPrice}>55,500 ￦</div>
+                        <div css={ChartChange}>- 300 ￦(0.54%)</div>
+                        <div css={ChartTotal}>331조 3,229억 원</div>
+                    </div>
                     <img css={Chart} src={test} alt="CHART"/>
                 </div>
                 <div css={HLineBold}></div>
