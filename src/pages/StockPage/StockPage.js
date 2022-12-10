@@ -26,6 +26,8 @@ function StockPage(){
                 <TradingBox/>
                 <StockList/>
                 <StockDetail/>
+                
+                
         </div>
     );
 }
