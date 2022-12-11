@@ -155,7 +155,7 @@ const StockLineValue = css`
 const StockLineUnit = css`
 `
 
-function MyFavStock(){
+function MyFavStock({token}){
     return(
         <div css={ComponentLayOut}>
             <div css={Title}>관심종목 관리</div>

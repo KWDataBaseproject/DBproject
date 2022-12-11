@@ -1,5 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
+import axios from 'axios';
 
 const ComponentLayOut = css`
     margin-top: 10px;
@@ -75,7 +76,7 @@ const SecondaryDataValue = css`
     text-align:right;
 `
 
-function MyUserInform(){
+function MyUserInform({token}){
     return(
         <div css={ComponentLayOut}>
             <div css={HeaderLine}>
@@ -112,27 +113,27 @@ function MyUserInform(){
             <div css={SecondaryData}>
                 <div css={SecondaryDataBox}>
                     <div css={SecondaryDataName}>상한가</div>
-                    <dvs css={SecondaryDataValue}>0</dvs>
+                    <div css={SecondaryDataValue}>0</div>
                 </div>
                 <div css={SecondaryDataBox}>
                     <div css={SecondaryDataName}>상승</div>
-                    <dvs css={SecondaryDataValue}>0</dvs>
+                    <div css={SecondaryDataValue}>0</div>
                 </div>
                 <div css={SecondaryDataBox}>
                     <div css={SecondaryDataName}>보합</div>
-                    <dvs css={SecondaryDataValue}>0</dvs>
+                    <div css={SecondaryDataValue}>0</div>
                 </div>
                 <div css={SecondaryDataBox}>
                     <div css={SecondaryDataName}>하락</div>
-                    <dvs css={SecondaryDataValue}>0</dvs>
+                    <div css={SecondaryDataValue}>0</div>
                 </div>
                 <div css={SecondaryDataBox}>
                     <div css={SecondaryDataName}>하한가</div>
-                    <dvs css={SecondaryDataValue}>0</dvs>
+                    <div css={SecondaryDataValue}>0</div>
                 </div>
                 <div css={SecondaryDataBox}>
                     <div css={SecondaryDataName}>평균등락률</div>
-                    <dvs css={SecondaryDataValue}>0.00%</dvs>
+                    <div css={SecondaryDataValue}>0.00%</div>
                 </div>
             </div>
         </div>

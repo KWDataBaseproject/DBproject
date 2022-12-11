@@ -5,6 +5,7 @@ import MyDetail from './MyDetail';
 import MyUserInform from './MyUserInform';
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import axios from 'axios';
 
 const PageRender = keyframes`
     from{
@@ -69,7 +70,7 @@ const LogOutButton = css`
     }
 `
 
-function MyPage({auth, setAuth}){
+function MyPage({token, auth, setAuth}){
     const [tapIndex, setTapIndex] = useState(0);
     return(
         <div css={PageLayOut}>
@@ -83,14 +84,14 @@ function MyPage({auth, setAuth}){
                 </div>
                 <div css={HLineBold}/>
                 <div css={MyPageUserInform}>
-                    <MyUserInform/>
+                    <MyUserInform token={token}/>
                 </div>
                 <div css={HLineBold}/>
                 <div css={MyPageTap}>
                     <MyTapBar auth={auth} tapIndex={tapIndex} setTapIndex={setTapIndex}/>
                 </div>
                 <div css={MyPageDetail}>
-                    <MyDetail tapIndex={tapIndex} auth={auth}/>
+                    <MyDetail token={token} tapIndex={tapIndex} auth={auth}/>
             </div>
         </div>
     );

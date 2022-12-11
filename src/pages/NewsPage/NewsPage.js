@@ -20,7 +20,7 @@ const PageLayOut = css`
   animation: ${PageRender} 1s;
 `;
 
-function NewsPage(){
+function NewsPage({token}){
     return(
         <div css={PageLayOut}>
             <NewsBoard/>

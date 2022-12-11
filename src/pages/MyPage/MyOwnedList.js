@@ -153,7 +153,7 @@ const StockLineValue = css`
 const StockLineUnit = css`
 `
 
-function MyOwnedList(){
+function MyOwnedList({ token }){
     return(
         <div css={ComponentLayOut}>
             <div css={Title}>보유자산 목록</div>

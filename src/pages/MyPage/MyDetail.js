@@ -12,21 +12,21 @@ const ComponentLayOut = css`
     margin-top: 10px;
 `
 
-function MyDetail({tapIndex, auth}){
+function MyDetail({token, tapIndex, auth}){
     return(
         <div css={ComponentLayOut}>
             {tapIndex === 0 ?
-                <MyOwnedList/>
+                <MyOwnedList token={token}/>
             :
                 (tapIndex === 1 ? 
-                    <MyTradeList/>
+                    <MyTradeList token={token}/>
                 :
                     (tapIndex === 2 ?
-                        <MyFavStock/>
+                        <MyFavStock token={token}/>
                     :
                         (tapIndex === 3 ?
                             ( auth === 1 ? 
-                                <MyAccountSetting/>
+                                <MyAccountSetting token={token}/>
                             :
                                 <AdminAccountSetting/>
                             )
