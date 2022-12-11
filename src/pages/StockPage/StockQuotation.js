@@ -36,8 +36,6 @@ const BoxValue = css`
     text-align: center;
 `
 
-
-
 function StockQuotation(){
     return(
         <div css={ComponentLayOut}>
@@ -51,7 +49,7 @@ function StockQuotation(){
             </div>
             <div css={HLine}></div>
             <div css={BoxLine}>
-                <div css={BoxValue}>현재가</div>
+                <div css={BoxValue}>58,100</div>
                 <div css={BoxValue}>현재가</div>
                 <div css={BoxValue}>현재가</div>
                 <div css={BoxValue}>현재가</div>
