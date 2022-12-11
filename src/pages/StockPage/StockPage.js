@@ -20,14 +20,12 @@ const PageLayOut = css`
     margin-top:30px;
 `
 
-function StockPage(){
+function StockPage({token}){
     return(
         <div css={PageLayOut}>
                 <TradingBox/>
                 <StockList/>
                 <StockDetail/>
-                
-                
         </div>
     );
 }

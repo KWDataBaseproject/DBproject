@@ -32,7 +32,7 @@ const PageRow = css`
     padding-bottom: 35px;
 `
 
-function MainPage(){
+function MainPage({ token }){
     return(
         <div css={PageLayOut}>
             <div css={PageRow}>

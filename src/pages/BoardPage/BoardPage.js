@@ -18,7 +18,7 @@ const PageLayOut = css`
     animation: ${PageRender} 1s;
 `
 
-function BoardPage(){
+function BoardPage({token}){
     return(
         <div css={PageLayOut}>
             <BoardStockList/>

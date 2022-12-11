@@ -152,7 +152,7 @@ const StockLineValue = css`
 const StockLineUnit = css`
 `
 
-function MyTradeList(){
+function MyTradeList({ token }){
     return(
         <div css={ComponentLayOut}>
             <div css={Title}>자산 매매내역</div>

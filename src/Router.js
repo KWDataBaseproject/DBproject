@@ -58,12 +58,12 @@ function Router() {
                 <div css={Body}>
                     <div css={Page} id="Page" name="Page">
                         <Routes>
-                            <Route exact path ="/" element={<MainPage/>}/>
-                            <Route path ="/DBproject" element={<MainPage/>}/>
-                            <Route path ="/profile" element={<MyPage setAuth={setAuth} auth={auth}/>}/>
-                            <Route path ="/news" element={<NewsPage/>}/>
-                            <Route path ="/board" element={<BoardPage/>}/>
-                            <Route path ="/stock" element={<StockPage/>}/>
+                            <Route exact path ="/" element={<MainPage token={token}/>}/>
+                            <Route path ="/DBproject" element={<MainPage token={token}/>}/>
+                            <Route path ="/profile" element={<MyPage token={token} setAuth={setAuth} auth={auth}/>}/>
+                            <Route path ="/news" element={<NewsPage token={token}/>}/>
+                            <Route path ="/board" element={<BoardPage token={token}/>}/>
+                            <Route path ="/stock" element={<StockPage token={token}/>}/>
                         </Routes>
                     </div>
                 </div>

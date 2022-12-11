@@ -1,5 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css, keyframes } from '@emotion/react';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 
 const PageRender = keyframes`
     from{
@@ -77,7 +79,26 @@ const InformContent = css`
     line-height: 44px;
 `
 
-function MyAccountSetting(){
+function MyAccountSetting({token}){
+    const [userInform, setUserInform] = useState(null);
+
+    useEffect(() => {
+        axios.get('https://db2.ccppoo.net/user/info',{
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        }
+        ).then(
+            (res)=>{
+                setUserInform(res.data);
+            }
+        ).catch(
+            (err)=>{
+                console.log(err);
+            }
+        )
+    },[ token ])
+
     return(
         <div css={ComponentLayOut}>
             <div css={AccountInformBox}>
@@ -86,30 +107,40 @@ function MyAccountSetting(){
                 <div css={ModifyButton}>+ 수정</div>
                 </div>
                 <div css={HLineBold}/>
-                <div css={InformLine}>
-                    <div css={InformTitle}>ID</div>
-                    <div css={InformContent}>bbbjihan</div>
-                </div>
-                <div css={InformLine}>
-                    <div css={InformTitle}>비밀번호</div>
-                    <div css={InformContent}>●●●●●●●●●●●</div>
-                </div>
-                <div css={InformLine}>
-                    <div css={InformTitle}>이메일</div>
-                    <div css={InformContent}>parkjihan5253@gmail.com</div>
-                </div>
-                <div css={InformLine}>
-                    <div css={InformTitle}>이름</div>
-                    <div css={InformContent}>박지한</div>
-                </div>
-                <div css={InformLine}>
-                    <div css={InformTitle}>생년월일</div>
-                    <div css={InformContent}>1996 - 08 - 14</div>
-                </div>
-                <div css={InformLine}>
-                    <div css={InformTitle}>마지막 로그인</div>
-                    <div css={InformContent}>2022 - 12 - 07, 15:36</div>
-                </div>
+                {userInform === null ?
+                    ""
+                :
+                    <>
+                        <div css={InformLine}>
+                            <div css={InformTitle}>ID</div>
+                            <div css={InformContent}>{userInform.user_name}</div>
+                        </div>
+                        <div css={InformLine}>
+                            <div css={InformTitle}>비밀번호</div>
+                            <div css={InformContent}>●●●●●●●●●●●●●</div>
+                        </div>
+                        <div css={InformLine}>
+                            <div css={InformTitle}>이메일</div>
+                            <div css={InformContent}>{userInform.email}</div>
+                        </div>
+                        <div css={InformLine}>
+                            <div css={InformTitle}>별명</div>
+                            <div css={InformContent}>{userInform.user_nickname}</div>
+                        </div>
+                        <div css={InformLine}>
+                            <div css={InformTitle}>이름</div>
+                            <div css={InformContent}>{userInform.last_name + userInform.first_name}</div>
+                        </div>
+                        <div css={InformLine}>
+                            <div css={InformTitle}>생년월일</div>
+                            <div css={InformContent}>{userInform.birthday}</div>
+                        </div>
+                        <div css={InformLine}>
+                            <div css={InformTitle}>마지막 로그인</div>
+                            <div css={InformContent}>{userInform.last_login}</div>
+                        </div>
+                    </>
+                }
                 <div css={HLineBold}/>
             </div>
         </div>
