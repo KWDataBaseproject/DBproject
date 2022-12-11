@@ -22,16 +22,13 @@ const ComponentLayOut = css`
     }
 `
 
-const Chart = css`
-    display: flex;
-    flex-direction: column;
-`
-
 const InformBox = css`
+    display: flex;
+    justify-content: flex;
 `
 
 const QuotationBox = css`
-    
+    width: 100%;
 `
 
 
@@ -40,7 +37,7 @@ function StockDetail(){
     return(
         <div css={ComponentLayOut}>
             <div css={InformBox}><StockInform/></div>         
-            <ApexCharts 
+                    <ApexCharts 
                         type='candlestick'
                         series={ [
                         { 
@@ -334,12 +331,11 @@ function StockDetail(){
                             enabled: true
                         }
                         }
-                    }
+                        }
                         }
                     >
                     </ApexCharts>
             <div css={QuotationBox}><StockQuotation/></div>
-            
             
         </div>
     )

@@ -60,7 +60,7 @@ function Router() {
                         <Routes>
                             <Route exact path ="/" element={<MainPage/>}/>
                             <Route path ="/DBproject" element={<MainPage/>}/>
-                            <Route path ="/profile" element={<MyPage auth={auth}/>}/>
+                            <Route path ="/profile" element={<MyPage setAuth={setAuth} auth={auth}/>}/>
                             <Route path ="/news" element={<NewsPage/>}/>
                             <Route path ="/board" element={<BoardPage/>}/>
                             <Route path ="/stock" element={<StockPage/>}/>
