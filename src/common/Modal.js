@@ -1,7 +1,8 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import LogIn from './LogIn';
+import Register from './Register';
 
 const ComponentLayOut = css`
     width:100%;
@@ -28,6 +29,7 @@ const ModalInner = css`
 `
 
 function Modal({setAuth, logInModal, setLogInModal}){
+    const [modalContent, setModalContent] = useState(0);
     const ModalBG = useRef();
     return(
         <div css={ComponentLayOut}>
@@ -39,7 +41,11 @@ function Modal({setAuth, logInModal, setLogInModal}){
                 }
             }}>
                 <div css={ModalInner}>
-                    <LogIn setAuth={setAuth} setLogInModal={setLogInModal}/>
+                    {modalContent === 0 ?
+                    <LogIn setModalContent={setModalContent} setAuth={setAuth} setLogInModal={setLogInModal}/>
+                    :
+                    <Register setModalContent={setModalContent} setAuth={setAuth} setLogInModal={setLogInModal}/>
+                    }                    
                 </div>
             </div>
           )
