@@ -1,5 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
+import axios from 'axios';
 import { useState } from 'react';
 
 const ComponentLayOut = css`
@@ -79,29 +80,8 @@ const LogInButton = css`
     line-height: 30px;
     margin-bottom: 10px;
 `
-const SocialKaKao = css`
-    width: 100%;
-    text-align: center;
-    cursor: pointer;
-    font-size: 15px;
-    height: 30px;
-    line-height: 30px;
-    margin-bottom: 20px;
-    background: #BEAB00;
-`
 
-const SocialGoogle = css`
-    width: 100%;
-    text-align: center;
-    background: white;
-    cursor: pointer;
-    font-size: 15px;
-    height: 30px;
-    line-height: 30px;
-    border: solid 1px black;
-`
-
-function LogIn({ setAuth, setLogInModal }){
+function LogIn({ setModalContent, setAuth, setLogInModal }){
     const [inputID, setInputID] = useState("");
     const [inputPW, setInputPW] = useState("");
 
@@ -114,6 +94,20 @@ function LogIn({ setAuth, setLogInModal }){
     const logInButtonOnClick = () => {
         console.log("ID: " + inputID);
         console.log("PW: " + inputPW);
+    }
+    const login = () => {
+        console.log("ID: " + inputID);
+        console.log("PW: " + inputPW);
+        axios.post('https://db2.ccppoo.net/auth/login/token',{
+            'username' : inputID,
+            'password' : inputPW
+        })
+        .then(
+            (res)=>{
+                console.log(res);
+            }
+        )
+        .catch((err)=>console.log(err))
     }
     return(
         <div css={ComponentLayOut}>
@@ -131,11 +125,14 @@ function LogIn({ setAuth, setLogInModal }){
                     <input onChange={onChangePW} css={InputBox} type="password" placeholder="비밀번호"/>
                 </div>
                 <div css={OptionLine}>
-                    <div css={Options}>회원가입</div>
+                    <div css={Options} onClick={()=>{setModalContent(1);}}>회원가입</div>
                     <div css={Options}>아이디/비밀번호 찾기</div>
                 </div>
             </div>
             <div css={Footer}>
+                <div css={LogInButton} onClick={()=>{login();}}>
+                    LOG IN
+                </div>
                 <div css={LogInButton} onClick={()=>{logInButtonOnClick(); setAuth(1); setLogInModal(false);}}>
                     LOG IN TEST
                 </div>
