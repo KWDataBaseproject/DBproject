@@ -22,6 +22,11 @@ const ComponentLayOut = css`
     }
 `
 
+const Chart = css`
+    display: flex;
+    flex-direction: column;
+`
+
 const InformBox = css`
 `
 
@@ -334,6 +339,7 @@ function StockDetail(){
                     >
                     </ApexCharts>
             <div css={QuotationBox}><StockQuotation/></div>
+            
             
         </div>
     )
