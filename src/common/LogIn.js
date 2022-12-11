@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
 import axios from 'axios';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import jwt_decode from "jwt-decode";
 
 const ComponentLayOut = css`
@@ -88,7 +88,7 @@ const ErrorText = css`
     margin-bottom: 10px;
 `
 
-function LogIn({ setToken, setModalContent, setAuth, setLogInModal }){
+function LogIn({ token, setToken, setModalContent, setAuth, setLogInModal }){
     const [inputID, setInputID] = useState("");
     const [inputPW, setInputPW] = useState("");
     const [errorText, setErrorText] = useState("");
@@ -115,6 +115,12 @@ function LogIn({ setToken, setModalContent, setAuth, setLogInModal }){
         .then(
             (res)=>{
                 setToken(res.data.access_token);
+                axios.post('https://db2.ccppoo.net/user/balance/makeAccount',{},{
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
+                }
+                ).then(console.log("makeAccount Success")).catch(console.log("makeAccount Fail"))
                 if(jwt_decode(res.data.access_token).admin){
                     setAuth(2);
                 }else{
@@ -128,6 +134,7 @@ function LogIn({ setToken, setModalContent, setAuth, setLogInModal }){
             setErrorText("아이디와 비밀번호를 확인하세요.");
         })
     }
+
     return(
         <div css={ComponentLayOut}>
             <div css={Header}>

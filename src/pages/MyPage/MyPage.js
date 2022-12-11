@@ -70,7 +70,7 @@ const LogOutButton = css`
     }
 `
 
-function MyPage({token, auth, setAuth}){
+function MyPage({token, setToken, auth, setAuth}){
     const [tapIndex, setTapIndex] = useState(0);
     return(
         <div css={PageLayOut}>
@@ -78,7 +78,7 @@ function MyPage({token, auth, setAuth}){
                     <NavLink to ="/"
                     style={{ textDecoration: 'none' }}
                     css={LogOutButton}
-                    onClick={()=>{setAuth(0);}}>
+                    onClick={()=>{setAuth(0);setToken(null);}}>
                             로그아웃
                     </NavLink>
                 </div>

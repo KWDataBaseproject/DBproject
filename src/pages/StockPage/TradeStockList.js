@@ -1,5 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
+import axios from 'axios';
 import { useState } from 'react';
 import TapButton from '../../common/TapButton';
 
@@ -208,12 +209,12 @@ const StockChange = css`
     text-align: right;
 `
 
-
-function StockList(){
+function StockList({setStockCode, setStockName, stockList}){
     const [tapIndex, setTapIndex] = useState(0);
     const [nameAlignDesc, setNameAlignDesc] = useState(true);
     const [priceAlignDesc, setPriceAlignDesc] = useState(false);
     const [changeAlignDesc, setChangeAlignDesc] = useState(false);
+
     return(
         <div css={ComponentLayOut}>
             <div css={SearchBar}>
