@@ -116,7 +116,7 @@ function Register({ setModalContent, setAuth, setLogInModal }){
     const [inputNickName, setInputNickName] = useState("");
     const [inputEmail, setInputEmail] = useState("");
     const [inputBD, setInputBD] = useState("");
-    const [errorText, setErrorText] = useState("　");
+    const [errorText, setErrorText] = useState("");
 
     const onChangeID = (e) => {
         setInputID(e.target.value);
@@ -141,19 +141,11 @@ function Register({ setModalContent, setAuth, setLogInModal }){
     }
 
     const regist = () => {
-        console.log("ID: " + inputID);
-        console.log("PW: " + inputPW);
-        console.log("name: " + inputLName);
-        console.log("name: " + inputFName);
-        console.log("Nname: " + inputNickName);
-        console.log("email: " + inputEmail);
-        console.log("birth: " + inputBD);
         axios.post('https://db2.ccppoo.net/auth/register',
             {
-                username : "",
+                username : inputID,
                 user_nickname : inputNickName,
                 hased_pw : inputPW,
-                user_control_id : inputID,
                 name : {
                     first : inputFName,
                     last : inputLName
@@ -176,7 +168,7 @@ function Register({ setModalContent, setAuth, setLogInModal }){
         )
         .catch((err)=>{
             console.log(err);
-            setErrorText(err.response.data.detail);
+            setErrorText("회원가입 정보를 확인해주세요.");
         })
     }
 
