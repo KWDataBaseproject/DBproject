@@ -147,6 +147,7 @@ const ChartTotal = css`
 
 function MajorStock(){
     const [listIndex, setListIndex] = useState(0);
+
     return(
         <div css={ComponentLayOut}>
             <div css={LeftContent}>
