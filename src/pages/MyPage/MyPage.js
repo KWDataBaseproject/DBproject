@@ -4,6 +4,7 @@ import MyTapBar from './MyTapBar';
 import MyDetail from './MyDetail';
 import MyUserInform from './MyUserInform';
 import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 const PageRender = keyframes`
     from{
@@ -29,7 +30,6 @@ const HLineBold = css`
 `
 
 const MyPageUserInform = css`
-    margin-top: 15px;
     width = 100%;
     padding-top: 13px;
     padding-bottom: 5px;
@@ -45,21 +45,52 @@ const MyPageDetail = css`
     width: 100%;
     display: flex;
 `
+const LogOutButtonLine = css`
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 5px;
+`
+const LogOutButton = css`
+    height: 25px;
+    width: 100px;
+    font-size: 15px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    line-height: 25px;
+    text-align: center;
+    border: 1px solid grey;
+    cursor: pointer;
+    color: grey;
+    &:hover{
+        color: black;
+        border: 1px solid black;
+        transform: translateY(0px);
+        transition: 0.3s;
+    }
+`
 
-function MyPage({auth}){
+function MyPage({auth, setAuth}){
     const [tapIndex, setTapIndex] = useState(0);
     return(
         <div css={PageLayOut}>
-            <div css={MyPageUserInform}>
-            <div css={HLineBold}/>
-                <MyUserInform/>
-            </div>
-            <div css={HLineBold}/>
-            <div css={MyPageTap}>
-                <MyTapBar auth={auth} tapIndex={tapIndex} setTapIndex={setTapIndex}/>
-            </div>
-            <div css={MyPageDetail}>
-                <MyDetail tapIndex={tapIndex} auth={auth}/>
+                <div css={LogOutButtonLine}>
+                    <NavLink to ="/"
+                    style={{ textDecoration: 'none' }}
+                    css={LogOutButton}
+                    onClick={()=>{setAuth(0);}}>
+                            로그아웃
+                    </NavLink>
+                </div>
+                <div css={HLineBold}/>
+                <div css={MyPageUserInform}>
+                    <MyUserInform/>
+                </div>
+                <div css={HLineBold}/>
+                <div css={MyPageTap}>
+                    <MyTapBar auth={auth} tapIndex={tapIndex} setTapIndex={setTapIndex}/>
+                </div>
+                <div css={MyPageDetail}>
+                    <MyDetail tapIndex={tapIndex} auth={auth}/>
             </div>
         </div>
     );

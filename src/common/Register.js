@@ -43,24 +43,6 @@ const InputTitle = css`
     width: 30%;
 `
 
-const OptionLine = css`
-    display:flex;
-    justify-content:space-between;
-    margin-top: 20px;
-    margin-bottom: 20px;
-`
-
-const Options = css`
-    font-size: 13px;
-    color: grey;
-    cursor: pointer;
-    &:hover{
-        color: black;
-        transform: translateY(0px);
-        transition: 0.3s;
-    }
-`
-
 const Footer = css`
     display: flex;
     flex-direction: column;
@@ -79,16 +61,6 @@ const LogInButton = css`
     height: 30px;
     line-height: 30px;
     margin-bottom: 10px;
-`
-const SocialKaKao = css`
-    width: 100%;
-    text-align: center;
-    cursor: pointer;
-    font-size: 15px;
-    height: 30px;
-    line-height: 30px;
-    margin-bottom: 20px;
-    background: #BEAB00;
 `
 
 const CancelButton = css`
