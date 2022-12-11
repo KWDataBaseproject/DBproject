@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
 import StockInform from './StockInform';
+import StockQuotation from './StockQuotation';
 import test from '../MainPage/test.png';
 import ApexCharts from "react-apexcharts";
 
@@ -21,13 +22,16 @@ const ComponentLayOut = css`
     }
 `
 
-const InformBox = css`
+const Chart = css`
     display: flex;
-    justify-content: flex;
+    flex-direction: column;
+`
+
+const InformBox = css`
 `
 
 const QuotationBox = css`
-    width: 100%;
+    
 `
 
 
@@ -36,7 +40,7 @@ function StockDetail(){
     return(
         <div css={ComponentLayOut}>
             <div css={InformBox}><StockInform/></div>         
-                    <ApexCharts 
+            <ApexCharts 
                         type='candlestick'
                         series={ [
                         { 
@@ -330,10 +334,11 @@ function StockDetail(){
                             enabled: true
                         }
                         }
-                        }
+                    }
                         }
                     >
                     </ApexCharts>
+            <div css={QuotationBox}><StockQuotation/></div>
             
             
         </div>

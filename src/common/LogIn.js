@@ -2,6 +2,7 @@
 import { css } from '@emotion/react';
 import axios from 'axios';
 import { useState } from 'react';
+import jwt_decode from "jwt-decode";
 
 const ComponentLayOut = css`
     margin-left: 40px;
@@ -80,10 +81,17 @@ const LogInButton = css`
     line-height: 30px;
     margin-bottom: 10px;
 `
+const ErrorText = css`
+    color: red;
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 10px;
+`
 
-function LogIn({ setModalContent, setAuth, setLogInModal }){
+function LogIn({ setToken, setModalContent, setAuth, setLogInModal }){
     const [inputID, setInputID] = useState("");
     const [inputPW, setInputPW] = useState("");
+    const [errorText, setErrorText] = useState("");
 
     const onChangeID = (e) => {
         setInputID(e.target.value);
@@ -91,23 +99,34 @@ function LogIn({ setModalContent, setAuth, setLogInModal }){
     const onChangePW = (e) => {
         setInputPW(e.target.value);
     }
-    const logInButtonOnClick = () => {
-        console.log("ID: " + inputID);
-        console.log("PW: " + inputPW);
-    }
     const login = () => {
-        console.log("ID: " + inputID);
-        console.log("PW: " + inputPW);
-        axios.post('https://db2.ccppoo.net/auth/login/token',{
-            'username' : inputID,
-            'password' : inputPW
-        })
-        .then(
-            (res)=>{
-                console.log(res);
+        axios.post('https://db2.ccppoo.net/auth/login/token',
+            {
+                username : inputID,
+                password : inputPW,
+            },
+            {
+                    headers:{
+                        'Content-type': 'application/x-www-form-urlencoded',
+                        'Accept': 'application/json'
+                    }
             }
         )
-        .catch((err)=>console.log(err))
+        .then(
+            (res)=>{
+                setToken(res.data.access_token);
+                if(jwt_decode(res.data.access_token).admin){
+                    setAuth(2);
+                }else{
+                    setAuth(1);
+                }
+                setLogInModal(false);
+            }
+        )
+        .catch((err)=>{
+            console.log(err.response.data.detail);
+            setErrorText("아이디와 비밀번호를 확인하세요.");
+        })
     }
     return(
         <div css={ComponentLayOut}>
@@ -130,14 +149,9 @@ function LogIn({ setModalContent, setAuth, setLogInModal }){
                 </div>
             </div>
             <div css={Footer}>
+                <div css={ErrorText}>{errorText}</div>
                 <div css={LogInButton} onClick={()=>{login();}}>
                     LOG IN
-                </div>
-                <div css={LogInButton} onClick={()=>{logInButtonOnClick(); setAuth(1); setLogInModal(false);}}>
-                    LOG IN TEST
-                </div>
-                <div css={LogInButton} onClick={()=>{setAuth(2); setLogInModal(false);}}>
-                    ADMIN LOG IN TEST
                 </div>
             </div>
         </div>

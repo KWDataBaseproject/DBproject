@@ -48,11 +48,12 @@ const Page = css`
 function Router() {
     const [pageIndex, setPageIndex] = useState(0);
     const [auth, setAuth] = useState(0);
+    const [token, setToken] = useState("");
     const [logInModal, setLogInModal] = useState(false);
     return (
         <div css={Font}>
             <BrowserRouter>
-                <Modal setAuth={setAuth} logInModal={logInModal} setLogInModal={setLogInModal}/>
+                <Modal setToken={setToken} setAuth={setAuth} logInModal={logInModal} setLogInModal={setLogInModal}/>
                 <div css={Header}><Navigation setLogInModal = {setLogInModal} auth = {auth} setAuth = {setAuth} pageIndex={pageIndex} setPageIndex={setPageIndex}/></div>
                 <div css={Body}>
                     <div css={Page} id="Page" name="Page">
