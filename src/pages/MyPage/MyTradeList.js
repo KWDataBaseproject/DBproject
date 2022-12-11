@@ -1,5 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css, keyframes } from '@emotion/react';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 
 const PageRender = keyframes`
     from{
@@ -153,6 +155,25 @@ const StockLineUnit = css`
 `
 
 function MyTradeList({ token }){
+    const [userSell, setUserSell] = useState(null);
+    useEffect(() => {
+        axios.get('https://db2.ccppoo.net/user/balance/history',{
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        }
+        ).then(
+            (res)=>{
+                setUserSell(res.data);
+                setUserSell(res);
+            }
+        ).catch(
+            (err)=>{
+                console.log(err);
+            }
+        )
+    },[ token ])
+    console.log(userSell);
     return(
         <div css={ComponentLayOut}>
             <div css={Title}>자산 매매내역</div>
@@ -167,6 +188,7 @@ function MyTradeList({ token }){
             </div>
             <div css={HLineBold}/>
             <div css={StockList}>
+  
                 <div css={StockLine}>
                     <div css={StockLineNameCard}>
                         <div css={StockLineName}>광운대학교</div>
