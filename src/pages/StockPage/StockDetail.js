@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
 import StockInform from './StockInform';
+import StockQuotation from './StockQuotation';
 import test from '../MainPage/test.png';
 import ApexCharts from "react-apexcharts";
 
@@ -21,13 +22,14 @@ const ComponentLayOut = css`
     }
 `
 
-const Chart = css`
-    display: flex;
-    flex-direction: column;
-`
-
 const InformBox = css`
 `
+
+const QuotationBox = css`
+    
+`
+
+
 
 function StockDetail(){
     return(
@@ -280,7 +282,7 @@ function StockDetail(){
             ]
           }
           options={{
-            chart: {
+            chart: {        
               toolbar: {
                 show: true,
                 offsetX: 0,
@@ -318,7 +320,8 @@ function StockDetail(){
           }
         }
         >
-        </ApexCharts>
+            </ApexCharts>
+            <div css={QuotationBox}><StockQuotation/></div>
             
         </div>
     )
