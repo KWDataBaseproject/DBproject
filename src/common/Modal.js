@@ -28,7 +28,7 @@ const ModalInner = css`
     font-size: 18px;
 `
 
-function Modal({setToken, setAuth, logInModal, setLogInModal}){
+function Modal({token, setToken, setAuth, logInModal, setLogInModal}){
     const [modalContent, setModalContent] = useState(0);
     const ModalBG = useRef();
     return(
@@ -42,7 +42,7 @@ function Modal({setToken, setAuth, logInModal, setLogInModal}){
             }}>
                 <div css={ModalInner}>
                     {modalContent === 0 ?
-                    <LogIn setToken={setToken} setModalContent={setModalContent} setAuth={setAuth} setLogInModal={setLogInModal}/>
+                    <LogIn token={token} setToken={setToken} setModalContent={setModalContent} setAuth={setAuth} setLogInModal={setLogInModal}/>
                     :
                     <Register setModalContent={setModalContent} setAuth={setAuth} setLogInModal={setLogInModal}/>
                     }                    

@@ -53,14 +53,14 @@ function Router() {
     return (
         <div css={Font}>
             <BrowserRouter>
-                <Modal setToken={setToken} setAuth={setAuth} logInModal={logInModal} setLogInModal={setLogInModal}/>
+                <Modal token={token} setToken={setToken} setAuth={setAuth} logInModal={logInModal} setLogInModal={setLogInModal}/>
                 <div css={Header}><Navigation setLogInModal = {setLogInModal} auth = {auth} setAuth = {setAuth} pageIndex={pageIndex} setPageIndex={setPageIndex}/></div>
                 <div css={Body}>
                     <div css={Page} id="Page" name="Page">
                         <Routes>
                             <Route exact path ="/" element={<MainPage token={token}/>}/>
                             <Route path ="/DBproject" element={<MainPage token={token}/>}/>
-                            <Route path ="/profile" element={<MyPage token={token} setAuth={setAuth} auth={auth}/>}/>
+                            <Route path ="/profile" element={<MyPage token={token} setToken={setToken} setAuth={setAuth} auth={auth}/>}/>
                             <Route path ="/news" element={<NewsPage token={token}/>}/>
                             <Route path ="/board" element={<BoardPage token={token}/>}/>
                             <Route path ="/stock" element={<StockPage token={token}/>}/>

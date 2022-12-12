@@ -1,5 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css, keyframes } from '@emotion/react';
+import { useState } from 'react';
 import StockDetail from './StockDetail';
 import StockList from './TradeStockList';
 import TradingBox from './TradingBox';
@@ -20,12 +21,14 @@ const PageLayOut = css`
     margin-top:30px;
 `
 
-function StockPage({token}){
+function StockPage({ token }){
+    const [stockCode, setStockCode] = useState('');
+    const [stockName, setStockName] = useState('');
     return(
         <div css={PageLayOut}>
-                <TradingBox/>
-                <StockList/>
-                <StockDetail/>
+                <TradingBox token={token} stockCode={stockCode} stockName={stockName}/>
+                <StockList token={token} setStockCode={setStockCode} setStockName={setStockName}/>
+                <StockDetail token={token} stockCode={stockCode} stockName={stockName}/>
         </div>
     );
 }
