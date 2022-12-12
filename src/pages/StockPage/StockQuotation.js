@@ -11,6 +11,7 @@ const ComponentLayOut = css`
 `
 
 const HLineBold = css`
+    width: 100%;
     border-bottom: 1px solid black;
     height: 0px;
 `
@@ -19,6 +20,16 @@ const HLine = css`
     border-bottom: 1px solid #E0E0E0;
     height: 0px;
     width: 100%;
+`
+
+const TitleLine = css`
+    font-size: 20px;
+    margin-left: 20px;
+    margin-bottom:20px;
+    width: 80%;
+    height: 10%;
+    display:flex;
+    flex-direction:row;
 `
 
 const BoxLine = css`
@@ -39,10 +50,14 @@ const BoxValue = css`
 function StockQuotation(){
     return(
         <div css={ComponentLayOut}>
+            <div css={TitleLine}>
+                시세
+            </div>
             <div css={HLineBold}></div>
             <div css={BoxLine}>
                 <div css={BoxValue}>현재가</div>
-                <div css={BoxValue}>전일대비</div>
+                <div css={BoxValue}>매도호가</div>
+                <div css={BoxValue}>매수호가</div>
                 <div css={BoxValue}>시가</div>
                 <div css={BoxValue}>고가</div>
                 <div css={BoxValue}>저가</div>
@@ -50,12 +65,13 @@ function StockQuotation(){
             <div css={HLine}></div>
             <div css={BoxLine}>
                 <div css={BoxValue}>58,100</div>
-                <div css={BoxValue}>현재가</div>
-                <div css={BoxValue}>현재가</div>
-                <div css={BoxValue}>현재가</div>
-                <div css={BoxValue}>현재가</div>
+                <div css={BoxValue}>58,200</div>
+                <div css={BoxValue}>58,100</div>
+                <div css={BoxValue}>56,100</div>
+                <div css={BoxValue}>58,200</div>
+                <div css={BoxValue}>56,000</div>
             </div>
-            
+            <div css={HLineBold}></div>
         </div>
     )
 }

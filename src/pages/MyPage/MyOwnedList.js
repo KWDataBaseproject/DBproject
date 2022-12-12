@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css, keyframes } from '@emotion/react';
-
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 const PageRender = keyframes`
     from{
         opacity: 0;
@@ -154,6 +155,27 @@ const StockLineUnit = css`
 `
 
 function MyOwnedList({ token }){
+    const [userOwn, setUserOwn] = useState(null);
+
+    useEffect(() => {
+        axios.get('https://db2.ccppoo.net/user/stock',{
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        }
+        ).then(
+            
+            (res)=>{
+                setUserOwn(res.data);
+                console.log(res);               
+            }
+        ).catch(
+            (err)=>{
+                console.log(err);             
+            }
+        )
+    },[ token ])
+    console.log(userOwn, "모름");
     return(
         <div css={ComponentLayOut}>
             <div css={Title}>보유자산 목록</div>
@@ -168,71 +190,49 @@ function MyOwnedList({ token }){
             </div>
             <div css={HLineBold}/>
             <div css={StockList}>
-                <div css={StockLine}>
-                    <div css={StockLineNameCard}>
-                    <div css={StockLineName}>개꿀주</div>
-                    <div css={StockLineCode}>000000</div>
-                    </div>
-                    <div css={StockLineQuantity}>
-                        <div css={StockLineValue}>100,000</div>
-                        <div css={StockLineUnit}> 주</div>
-                    </div>
-                    <div css={StockLineAveragePrice}>
-                        <div css={StockLineValue}>5,000</div>
-                        <div css={StockLineUnit}> ￦</div>
-                    </div>
-                        <div css={StockLineBuyPrice}>
-                    <div css={StockLineValue}>500,000,000</div>
-                        <div css={StockLineUnit}> ￦</div>
-                    </div>
-                    <div css={StockLineNowPrice}>
-                        <div css={StockLineValue}>1,000,000,000</div>
-                        <div css={StockLineUnit}> ￦</div>
-                    </div>
-                    <div css={StockLineProfitCard}>
-                        <div css={StockLineProfitRatio}>
-                            <div css={StockLineValue}>+ 100</div>
-                            <div css={StockLineUnit}> %</div>
-                        </div>
-                        <div css={StockLineProfitValue}>
-                            <div css={StockLineValue}>+ 500,000,000</div>
-                            <div css={StockLineUnit}> ￦</div>
-                        </div>
-                    </div>
-                </div>
-                <div css={HLine}/>
-                <div css={StockLine}>
-                    <div css={StockLineNameCard}>
-                    <div css={StockLineName}>개꿀주</div>
-                    <div css={StockLineCode}>000000</div>
-                    </div>
-                    <div css={StockLineQuantity}>
-                        <div css={StockLineValue}>100,000</div>
-                        <div css={StockLineUnit}> 주</div>
-                    </div>
-                    <div css={StockLineAveragePrice}>
-                        <div css={StockLineValue}>5,000</div>
-                        <div css={StockLineUnit}> ￦</div>
-                    </div>
-                        <div css={StockLineBuyPrice}>
-                    <div css={StockLineValue}>500,000,000</div>
-                        <div css={StockLineUnit}> ￦</div>
-                    </div>
-                    <div css={StockLineNowPrice}>
-                        <div css={StockLineValue}>1,000,000,000</div>
-                        <div css={StockLineUnit}> ￦</div>
-                    </div>
-                    <div css={StockLineProfitCard}>
-                        <div css={StockLineProfitRatio}>
-                            <div css={StockLineValue}>+ 100</div>
-                            <div css={StockLineUnit}> %</div>
-                        </div>
-                        <div css={StockLineProfitValue}>
-                            <div css={StockLineValue}>+ 500,000,000</div>
-                            <div css={StockLineUnit}> ￦</div>
-                        </div>
-                    </div>
-                </div>
+            
+            {userOwn === null ? "" :                     
+                    userOwn.map((e)=>{
+                        return(<div css={StockLine}>
+                            <div css={StockLineNameCard}>
+                            <div css={StockLineName}>{e.isu_name_short}</div>
+                            <div css={StockLineCode}>{e.ISU_CODE}</div>
+                            </div>
+                            <div css={StockLineQuantity}>
+                                <div css={StockLineValue}>{e.count}</div>
+                                <div css={StockLineUnit}> 주</div>
+                            </div>
+                            <div css={StockLineAveragePrice}>
+                                <div css={StockLineValue}>5,000</div>
+                                <div css={StockLineUnit}> ￦</div>
+                            </div>
+                                <div css={StockLineBuyPrice}>
+                            <div css={StockLineValue}>{e.buy_price}</div>
+                                <div css={StockLineUnit}> ￦</div>
+                            </div>
+                            <div css={StockLineNowPrice}>
+                                <div css={StockLineValue}>2,125,464,232</div>
+                                <div css={StockLineUnit}> ￦</div>
+                            </div>
+                            <div css={StockLineProfitCard}>
+                                <div css={StockLineProfitRatio}>
+                                    <div css={StockLineValue}>+ 100</div>
+                                    <div css={StockLineUnit}> %</div>
+                                </div>
+                                <div css={StockLineProfitValue}>
+                                    <div css={StockLineValue}>+ 500,000,000</div>
+                                    <div css={StockLineUnit}> ￦</div>
+                                </div>
+                            </div>
+                        </div>)
+                        
+                    })
+                    
+                    
+            }
+                
+                
+            
                 <div css={HLine}/>
                 <div css={StockLine}><div css={StockLineNameCard}/></div>
                 <div css={HLine}/>
